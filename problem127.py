@@ -1,44 +1,20 @@
-class Solution:
+import collections
+class Solution(object):
     def ladderLength(self, beginWord, endWord, wordList):
-        """
-        :type beginWord: str
-        :type endWord: str
-        :type wordList: List[str]
-        :rtype: int
-        """
-        if endWord not in wordList:
-            return 0
-
-        def letter_difference(w1, w2):
-            count = 0
-            for i in range(len(w1)):
-                if w1[i] != w2[i]:
-                    count += 1
-            return count
-
-        word_diff = [[] for _ in range(len(beginWord))]
-        for i in wordList:
-            if i != beginWord:
-                word_diff[letter_difference(beginWord, i) - 1].append(i)
-        cand = [beginWord]
-        count = 1
-        while cand:
-            if endWord in cand:
-                return count
-            temp = []
-            for i in cand:
-                diff = letter_difference(i, beginWord)
-                for k in range(diff - 2, diff + 1):
-                    if 0 <= k <= len(beginWord) - 1:
-                        j = 0
-                        while j < len(word_diff[k]):
-                            if letter_difference(i, word_diff[k][j]) == 1:
-                                temp.append(word_diff[k].pop(j))
-                            else:
-                                j += 1
-            cand = temp
-            count += 1
+        wordList = set(wordList)
+        queue = collections.deque([[beginWord, 1]])
+        while queue:
+            word, length = queue.popleft()
+            if word == endWord:
+                return length
+            for i in range(len(word)):
+                for c in 'abcdefghijklmnopqrstuvwxyz':
+                    next_word = word[:i] + c + word[i+1:]
+                    if next_word in wordList:
+                        wordList.remove(next_word)
+                        queue.append([next_word, length + 1])
         return 0
+
 
 
 # print(Solution().ladderLength("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))
