@@ -1,23 +1,25 @@
 class Solution:
-    def canFinish(self, numCourses: int, prerequisites) -> bool:
-        edges_dict = {}
+    def canFinish(self, numCourses, prerequisites):
+        graph = [[] for _ in range(numCourses)]
+        visit = [0 for _ in range(numCourses)]
+        for x, y in prerequisites:
+            graph[x].append(y)
+
+        def dfs(i):
+            if visit[i] == -1:
+                return False
+            if visit[i] == 1:
+                return True
+            visit[i] = -1
+            for j in graph[i]:
+                if not dfs(j):
+                    return False
+            visit[i] = 1
+            return True
+
         for i in range(numCourses):
-            edges_dict[i] = []
-        for i in prerequisites:
-            if i[0] in edges_dict:
-                edges_dict[i[0]].append(i[1])
-        for i in range(numCourses):
-            visited = set()
-            todo = [i]
-            while todo:
-                temp = []
-                for j in todo:
-                    if j in visited:
-                        return False
-                    visited.add(j)
-                    temp += edges_dict[j]
-                    edges_dict[j] = []
-                todo = temp
+            if not dfs(i):
+                return False
         return True
 
 
