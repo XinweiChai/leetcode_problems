@@ -27,8 +27,6 @@ class Solution(object):
         l = 0
         for num in nums:
             i = binary_search(0, l, num)
-            if i < 0:
-                i = -(i + 1)
             dp[i] = num
             if i == l:
                 l += 1
