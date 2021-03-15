@@ -11,7 +11,7 @@ class Solution(object):
         #             nums[j], nums[j + 1] = nums[j + 1], nums[j]
         # return nums
 
-        # Cheat
+        # Cheat (two passes)
         # zeros = 0
         # ones = 0
         # twos = 0
@@ -34,26 +34,19 @@ class Solution(object):
         #         twos -= 1
         # return nums
 
-        # Three pointers
-        left = 0
+        # Dutch partitioning problem
+        red, white, blue = 0, 0, len(nums) - 1
 
-        def update(left, num):
-            while nums[left] == num and left < len(nums) - 1:
-                left += 1
-            return left
-
-        left = update(left, 0)
-        for i in range(left, len(nums)):
-            if nums[i] == 0 and i > left:
-                nums[i], nums[left] = nums[left], nums[i]
-                left = update(left, 0)
-
-        left = update(left, 1)
-        for i in range(left, len(nums)):
-            if nums[i] == 1 and i > left:
-                nums[i], nums[left] = nums[left], nums[i]
-                left = update(left, 1)
-        return nums
+        while white <= blue:
+            if nums[white] == 0:
+                nums[red], nums[white] = nums[white], nums[red]
+                white += 1
+                red += 1
+            elif nums[white] == 1:
+                white += 1
+            else:
+                nums[white], nums[blue] = nums[blue], nums[white]
+                blue -= 1
 
 
 print(Solution().sortColors([1,2,1]))

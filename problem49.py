@@ -12,7 +12,7 @@ class Solution(object):
             if tuple(count) in ans.keys():
                 ans[tuple(count)].append(s)
             else:
-                ans[tuple(count)]=[s]
+                ans[tuple(count)] = [s]
         return ans.values()
 
 

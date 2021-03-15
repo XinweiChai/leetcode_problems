@@ -9,7 +9,6 @@ class Solution(object):
         p = 0
         begin = 1
         while nums[p] + p < len(nums) - 1:
-
             long_dist = 0
             i = 0
             for i in range(begin, nums[p] + p + 1):
