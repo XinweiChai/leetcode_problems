@@ -6,37 +6,25 @@ class Solution(object):
         """
         r = len(board)
         c = len(board[0])
-
         to_keep = []
         for i in range(c):
-            if board[0][i] == 'O':
-                board[0][i] = 'S'
-                to_keep.append((0, i))
-            if board[r - 1][i] == 'O':
-                board[r - 1][i] = 'S'
-                to_keep.append((r - 1, i))
+            for j in (0, r - 1):
+                if board[j][i] == 'O':
+                    board[j][i] = 'S'
+                    to_keep.append((j, i))
         for i in range(1, r - 1):
-            if board[i][0] == 'O':
-                board[i][0] = 'S'
-                to_keep.append((i, 0))
-            if board[i][c - 1] == 'O':
-                board[i][c - 1] = 'S'
-                to_keep.append((i, c - 1))
+            for j in (0, c - 1):
+                if board[i][j] == 'O':
+                    board[i][j] = 'S'
+                    to_keep.append((i, j))
 
+        adjacent = [(1, 0), (0, 1), (-1, 0), (0, -1)]
         while to_keep:
             row, col = to_keep.pop()
-            if row + 1 < r and board[row + 1][col] == 'O':
-                board[row + 1][col] = 'S'
-                to_keep.append((row + 1, col))
-            if col + 1 < c and board[row][col + 1] == 'O':
-                board[row][col + 1] = 'S'
-                to_keep.append((row, col + 1))
-            if row - 1 >= 0 and board[row - 1][col] == 'O':
-                board[row - 1][col] = 'S'
-                to_keep.append((row - 1, col))
-            if col - 1 >= 0 and board[row][col - 1] == 'O':
-                board[row][col - 1] = 'S'
-                to_keep.append((row, col - 1))
+            for i, j in adjacent:
+                if 0 <= row + i < r and 0 <= col + j < c and board[row + i][col + j] == 'O':
+                    board[row + i][col + j] = 'S'
+                    to_keep.append((row + i, col + j))
         board[:] = [['XO'[c == 'S'] for c in row] for row in board]
         return board
         # flip = [[True] * c for _ in range(r)]
@@ -75,4 +63,5 @@ class Solution(object):
         #             board[i][j] = 'X'
         # return board
 
-# print(Solution().solve([["X", "X", "X", "X"], ["X", "O", "O", "X"], ["X", "X", "O", "X"], ["X", "O", "X", "X"]]))
+
+print(Solution().solve([["X", "X", "X", "X"], ["X", "O", "O", "X"], ["X", "X", "O", "X"], ["X", "O", "X", "X"]]))
