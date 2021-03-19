@@ -21,9 +21,9 @@ class Solution(object):
                     if two == 0:
                         stack.append(0)
                     else:
-                        stack.append(two//abs(two)*one//abs(one)*(abs(two)//abs(one)))
+                        stack.append(two // abs(two) * one // abs(one) * (abs(two) // abs(one)))
         return stack[0]
 
 
 # print(Solution().evalRPN(["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]))
-print(Solution().evalRPN(['0','3','/']))
+print(Solution().evalRPN(['0', '3', '/']))

@@ -23,4 +23,4 @@ class Solution(object):
 # print(Solution().fractionToDecimal(1, 6))
 # print(Solution().fractionToDecimal(1, 3))
 # print(Solution().fractionToDecimal(1, 13))
-print(Solution().fractionToDecimal(1, 333))
+print(Solution().fractionToDecimal(1, 7))
