@@ -8,22 +8,40 @@ class TreeNode:
 
 class Solution:
     def pathSum(self, root: TreeNode, sum: int) -> int:
-        cnt = 0
+        # Copy takes much extra space
+        # cnt = 0
+        #
+        # def rec(node, sums):
+        #     nonlocal cnt
+        #     if node:
+        #         if node.val == sum:
+        #             cnt += 1
+        #         for i in range(len(sums)):
+        #             sums[i] += node.val
+        #             if sums[i] == sum:
+        #                 cnt += 1
+        #         sums.append(node.val)
+        #         rec(node.left, sums.copy())
+        #         rec(node.right, sums)
+        # rec(root, [])
+        # return cnt
 
-        def rec(node, sums):
+        # Using Hashmap and avoiding copy
+        def rec(node, total, sums):
             nonlocal cnt
             if node:
-                if node.val == sum:
-                    cnt += 1
-                for i in range(len(sums)):
-                    sums[i] += node.val
-                    if sums[i] == sum:
-                        cnt += 1
-                sums.append(node.val)
-                rec(node.left, sums)
-                rec(node.right, sums)
+                total += node.val
+                if total - sum in sums:
+                    cnt += sums[total - sum]
+                sums[total] = sums[total] + 1 if total in sums else 1
+                rec(node.left, total, sums)
+                rec(node.right, total, sums)
+                sums[total] -= 1
+                if sums[total] == 0:
+                    sums.pop(total)
 
-        rec(root, [])
+        cnt = 0
+        rec(root, 0, {0: 1})
         return cnt
 
 
