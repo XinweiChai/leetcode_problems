@@ -7,7 +7,7 @@ class Solution(object):
         # also add end-building events(acts as buildings with 0 height)
         # and sort the events in left -> right order
         events = [(L, -H, R) for L, R, H in buildings]
-        events += list({(R, 0, 0) for _, R, _ in buildings})
+        events += list({(R, 0, None) for _, R, _ in buildings})
         events.sort()
 
         # res: result, [x, height]

@@ -29,7 +29,7 @@ class Solution(object):
             if half:
                 left, right = sort(enum[:half]), sort(enum[half:])
                 for i in range(len(enum))[::-1]:
-                    if not right or left and left[-1][1] > right[-1][1]:
+                    if not right or (left and left[-1][1] > right[-1][1]):
                         smaller[left[-1][0]] += len(right)
                         enum[i] = left.pop()
                     else:
