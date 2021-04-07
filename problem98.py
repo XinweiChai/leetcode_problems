@@ -6,21 +6,16 @@ class TreeNode(object):
         self.right = right
 
 
-class Solution(object):
-    def isValidBST(self, root):
-        """
-        :type root: TreeNode
-        :rtype: bool
-        """
-
-        def rec(root, inf, sup):
-            if not root:
+class Solution:
+    def isValidBST(self, root: TreeNode) -> bool:
+        def rec(node, inf, sup):
+            if not node:
                 return True
-            if root.val <= inf or root.val >= sup:
+            if node.val <= inf or node.val >= sup:
                 return False
-            if root.left and not rec(root.left, inf, min(sup, root.val)):
+            if not rec(node.left, inf, node.val):
                 return False
-            if root.right and not rec(root.right, max(inf, root.val), sup):
+            if not rec(node.right, node.val, sup):
                 return False
             return True
 
