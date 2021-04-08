@@ -1,5 +1,5 @@
 from typing import List
-
+from collections import defaultdict
 
 class Solution(object):
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
@@ -23,11 +23,12 @@ class Solution(object):
         # return visit
 
         # Kahn's algorithm
-        graph = {}
+        graph = defaultdict(set)
         s = []
         in_degree = [0] * numCourses
         for i in prerequisites:
-            graph[i[1]] = graph[i[1]] | {i[0]} if i[1] in graph else {i[0]}
+            # graph[i[1]] = graph[i[1]] | {i[0]} if i[1] in graph else {i[0]}
+            graph[i[1]].add(i[0])
             in_degree[i[0]] += 1
         start = [i for i in range(len(in_degree)) if in_degree[i] == 0]
         while start:

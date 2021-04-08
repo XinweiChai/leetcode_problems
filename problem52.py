@@ -1,19 +1,13 @@
-from typing import List
-
-
 class Solution:
-    def solveNQueens(self, n: int) -> List[List[str]]:
-        res = []
+    def totalNQueens(self, n: int) -> int:
+        res = 0
         queens = []
         cols = [True] * n
 
         def dfs(row):
+            nonlocal res
             if len(queens) == n:
-                board = [['.'] * n for _ in range(n)]
-                for i, j in queens:
-                    board[i][j] = 'Q'
-                board = ["".join(i) for i in board]
-                res.append(board)
+                res +=1
             for i in range(n):
                 if cols[i]:
                     diag = True
@@ -30,6 +24,3 @@ class Solution:
 
         dfs(0)
         return res
-
-
-print(len(Solution().solveNQueens(8)))
