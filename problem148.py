@@ -1,4 +1,4 @@
-from ListNode import ListNode
+from ListNode import ListNode, create_list
 
 
 class Solution:
@@ -131,6 +131,5 @@ class Solution:
         return dummy.next
 
 
-a = ListNode(10, next=ListNode(1, next=ListNode(30, next=ListNode(2, next=ListNode(5)))))
-b = Solution().sortList(a)
-c = 1
+a = create_list(10, 1, 30, 2, 5)
+Solution().sortList(a).print_all()

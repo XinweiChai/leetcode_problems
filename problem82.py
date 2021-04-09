@@ -1,4 +1,4 @@
-from ListNode import ListNode
+from ListNode import ListNode, create_list
 
 
 class Solution(object):
@@ -16,5 +16,4 @@ class Solution(object):
         return sentinel.next
 
 
-a = ListNode(1, ListNode(2, ListNode(3, ListNode(3, ListNode(4, ListNode(4, ListNode(5)))))))
-Solution().deleteDuplicates(a).print_all()
+Solution().deleteDuplicates(create_list(1, 2, 3, 4, 4, 5)).print_all()

@@ -1,4 +1,4 @@
-from ListNode import ListNode
+from ListNode import ListNode, create_list
 
 
 class Solution:
@@ -19,5 +19,4 @@ class Solution:
         return sentinel.next
 
 
-print(Solution().reverseBetween(ListNode(1, next=ListNode(2, next=ListNode(3, next=ListNode(4, next=ListNode(5))))), 2,
-                                4))
+Solution().reverseBetween(create_list(1, 2, 3, 4, 5), 2, 4).print_all()

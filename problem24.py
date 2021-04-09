@@ -1,4 +1,4 @@
-from ListNode import ListNode
+from ListNode import ListNode, create_list
 
 
 class Solution:
@@ -18,9 +18,5 @@ class Solution:
         return new_head
 
 
-a = ListNode(5)
-b = ListNode(4, a)
-c = ListNode(3, b)
-d = ListNode(2, c)
-e = ListNode(1, d)
-Solution().swapPairs(e).print_all()
+a = create_list([1, 2, 3, 4, 5])
+Solution().swapPairs(a).print_all()

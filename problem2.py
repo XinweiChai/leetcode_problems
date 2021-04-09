@@ -1,4 +1,4 @@
-from ListNode import ListNode
+from ListNode import ListNode, create_list
 
 
 class Solution(object):
@@ -24,6 +24,4 @@ class Solution(object):
         return savehead.next
 
 
-b = Solution().addTwoNumbers(ListNode(2, next=ListNode(4, next=ListNode(3, next=ListNode(5)))),
-                             ListNode(5, next=ListNode(6, next=ListNode(4))))
-x = 1
+Solution().addTwoNumbers(create_list(2, 4, 3, 5), create_list(5, 6, 4)).print_all()

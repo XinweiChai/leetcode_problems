@@ -7,3 +7,12 @@ class ListNode:
         print(self.val)
         if self.next:
             self.next.print_all()
+
+
+def create_list(*args):
+    sentinel = ListNode(0)
+    head = sentinel
+    for i in args:
+        head.next = ListNode(i)
+        head = head.next
+    return sentinel.next

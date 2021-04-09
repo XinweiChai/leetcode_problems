@@ -1,6 +1,4 @@
 from typing import List
-
-
 from TreeNode import TreeNode
 
 

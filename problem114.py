@@ -1,4 +1,4 @@
-from TreeNode import TreeNode
+from TreeNode import TreeNode, create_tree
 
 
 class Solution:
@@ -35,7 +35,9 @@ class Solution:
         root.right = self.prev
         root.left = None
         self.prev = root
+        return root
 
 
-Solution().flatten(
-    TreeNode(1, left=TreeNode(2, left=TreeNode(3), right=TreeNode(4)), right=TreeNode(5, right=TreeNode(6))))
+x = create_tree([[1], [2, 5], [3, 4, None, 6]])
+Solution().flatten(x)
+x.print_all()

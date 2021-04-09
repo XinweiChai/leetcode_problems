@@ -1,5 +1,5 @@
 from typing import List
-from ListNode import ListNode
+from ListNode import ListNode, create_list
 from queue import PriorityQueue
 
 
@@ -73,8 +73,8 @@ class Solution:
         return sentinel.next
 
 
-a = ListNode(1, next=ListNode(4, next=ListNode(5)))
-b = ListNode(1, next=ListNode(3, next=ListNode(4)))
-c = ListNode(2, next=ListNode(6))
+a = create_list(1, 4, 5)
+b = create_list(1, 3, 4)
+c = create_list(2, 6)
 l = [a, b, c]
-print(Solution().mergeKLists(l))
+Solution().mergeKLists(l).print_all()

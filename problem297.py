@@ -3,11 +3,9 @@ from TreeNode import TreeNode
 
 # class Codec:
 #
-#     def serialize(self, root):
-#         """Encodes a tree to a single string.
-#
-#         :type root: TreeNode
-#         :rtype -> str
+#     def serialize(self, root: TreeNode) -> str:
+#         """
+#         Encodes a tree to a single string.
 #         """
 #         s = []
 #         cur = [root]
@@ -30,11 +28,9 @@ from TreeNode import TreeNode
 #             cur = temp
 #         return ';'.join(s)
 #
-#     def deserialize(self, data):
-#         """Decodes your encoded data to tree.
-#
-#         :type data: str
-#         :rtype -> TreeNode
+#     def deserialize(self, data: str) -> TreeNode:
+#         """
+#         Decodes your encoded data to tree.
 #         """
 #         if not data:
 #             return None
