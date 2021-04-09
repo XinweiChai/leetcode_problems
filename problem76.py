@@ -6,7 +6,7 @@ class Solution(object):
         """
         :type s: str
         :type t: str
-        :rtype: str
+        :rtype -> str
         """
 
         # if not t or not s:

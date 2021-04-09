@@ -8,11 +8,7 @@ def decide_one(s, left_pointer, right_pointer):
 
 
 class Solution(object):
-    def longestPalindrome(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
+    def longestPalindrome(self, s: str) -> str:
         longest = ''
         for i in range(len(s)):
             temp = decide_one(s, i, i)

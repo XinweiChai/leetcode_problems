@@ -1,10 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def findSubstring(self, s, words):
-        """
-        :type s: str
-        :type words: List[str]
-        :rtype: List[int]
-        """
+    def findSubstring(self, s: str, words: List[str]) -> List[int]:
         length = len(words[0])
         words_length = sum([len(i) for i in words])
         def is_valid(pos, words):

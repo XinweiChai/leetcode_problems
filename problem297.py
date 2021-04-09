@@ -1,9 +1,4 @@
-# Definition for a binary tree node.
-class TreeNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+from TreeNode import TreeNode
 
 
 # class Codec:
@@ -12,7 +7,7 @@ class TreeNode(object):
 #         """Encodes a tree to a single string.
 #
 #         :type root: TreeNode
-#         :rtype: str
+#         :rtype -> str
 #         """
 #         s = []
 #         cur = [root]
@@ -39,7 +34,7 @@ class TreeNode(object):
 #         """Decodes your encoded data to tree.
 #
 #         :type data: str
-#         :rtype: TreeNode
+#         :rtype -> TreeNode
 #         """
 #         if not data:
 #             return None

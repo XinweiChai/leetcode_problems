@@ -1,9 +1,8 @@
+from TreeNode import TreeNode
+
+
 class Solution(object):
-    def isSymmetric(self, root):
-        """
-        :type root: TreeNode
-        :rtype: bool
-        """
+    def isSymmetric(self, root: TreeNode) -> bool:
         if not root.left and not root.right:
             return True
 

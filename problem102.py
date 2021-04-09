@@ -1,15 +1,9 @@
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+from typing import List
+from TreeNode import TreeNode
+
+
 class Solution(object):
-    def levelOrder(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        """
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
         if not root:
             return []
         ans = []

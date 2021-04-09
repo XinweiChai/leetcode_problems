@@ -2,12 +2,7 @@ from collections import Counter
 
 
 class Solution(object):
-    def isScramble(self, s1, s2):
-        """
-        :type s1: str
-        :type s2: str
-        :rtype: bool
-        """
+    def isScramble(self, s1: str, s2: str) -> bool:
         if len(s1) <= 1:
             return s1 == s2
         l = len(s1)

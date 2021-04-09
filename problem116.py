@@ -1,4 +1,3 @@
-"""
 # Definition for a Node.
 class Node(object):
     def __init__(self, val=0, left=None, right=None, next=None):
@@ -6,16 +5,10 @@ class Node(object):
         self.left = left
         self.right = right
         self.next = next
-"""
 
 
 class Solution(object):
-    def connect(self, root):
-        """
-        :type root: Node
-        :rtype: Node
-        """
-
+    def connect(self, root: Node) -> Node:
         # def rec(nodes):
         #     if nodes[0]:
         #         new_nodes = []

@@ -1,10 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+    def twoSum(self, nums: List[int], target: int)->List[int]:
         # Worse solution, sort and search O(nlogn)
         # nums = list(enumerate(nums))
         # nums.sort(key=lambda x: x[1])

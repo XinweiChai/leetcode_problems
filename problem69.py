@@ -1,9 +1,5 @@
 class Solution(object):
-    def mySqrt(self, x):
-        """
-        :type x: int
-        :rtype: int
-        """
+    def mySqrt(self, x: int) -> int:
         if x <= 1:
             return x
         left = 0

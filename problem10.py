@@ -1,10 +1,5 @@
 class Solution(object):
-    def isMatch(self, s, p):
-        """
-        :type s: str
-        :type p: str
-        :rtype: bool
-        """
+    def isMatch(self, s: str, p: str) -> bool:
         if not p:
             return not s
         first_match = s and p[0] in [s[0], '.']

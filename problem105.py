@@ -1,12 +1,7 @@
 from typing import List
 
 
-# Definition for a binary tree node.
-class TreeNode(object):
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from TreeNode import TreeNode
 
 
 class Solution(object):
@@ -51,4 +46,5 @@ class Solution(object):
         return recur(0, len(inorder) - 1)
 
 
-print(Solution().buildTree([3, 9, 20, 15, 7], [9, 3, 15, 20, 7]))
+x = Solution().buildTree([3, 9, 20, 15, 7], [9, 3, 15, 20, 7])
+x.print_all()

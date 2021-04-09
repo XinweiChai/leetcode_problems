@@ -1,8 +1,10 @@
+from typing import List
+
+
 class Solution(object):
-    def solve(self, board):
+    def solve(self, board: List[List[str]]):
         """
-        :type board: List[List[str]]
-        :rtype: None Do not return anything, modify board in-place instead.
+        Do not return anything, modify board in-place instead.
         """
         r = len(board)
         c = len(board[0])

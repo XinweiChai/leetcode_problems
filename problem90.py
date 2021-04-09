@@ -1,12 +1,9 @@
 from collections import Counter
+from typing import List
 
 
 class Solution(object):
-    def subsetsWithDup(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+    def subsetsWithDup(self, nums: List[int])->List[List[int]]:
         nums = Counter(nums)
         res = [[]]
         for i in nums:

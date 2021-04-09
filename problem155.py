@@ -10,7 +10,7 @@ class MinStack(object):
     def push(self, x):
         """
         :type x: int
-        :rtype: None
+        :rtype -> None
         """
         if self.stack:
             self.min_stack.append(min(x, self.min_stack[-1]))
@@ -20,20 +20,20 @@ class MinStack(object):
 
     def pop(self):
         """
-        :rtype: None
+        :rtype -> None
         """
         self.stack.pop()
         self.min_stack.pop()
 
     def top(self):
         """
-        :rtype: int
+        :rtype -> int
         """
         return self.stack[-1]
 
     def getMin(self):
         """
-        :rtype: int
+        :rtype -> int
         """
         return self.min_stack[-1]
 

@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def generate(self, numRows):
-        """
-        :type numRows: int
-        :rtype: List[List[int]]
-        """
+    def generate(self, numRows: int) -> List[List[int]]:
         ans = [[1], [1, 1]]
         for i in range(2, numRows):
             temp = [1] * (i + 1)

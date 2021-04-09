@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def findPeakElement(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def findPeakElement(self, nums: List[int]) -> int:
         l = 0
         r = len(nums) - 1
         while l < r:

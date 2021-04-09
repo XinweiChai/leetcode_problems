@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def isValidSudoku(self, board):
-        """
-        :type board: List[List[str]]
-        :rtype: bool
-        """
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
         r = len(board)
         for i in range(r):
             row = [True] * r

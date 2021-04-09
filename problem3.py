@@ -1,12 +1,5 @@
-from collections import Counter
-
-
 class Solution(object):
-    def lengthOfLongestSubstring(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+    def lengthOfLongestSubstring(self, s: str) -> int:
         used = {}
         max_length = start = 0
         for i, c in enumerate(s):
@@ -14,9 +7,7 @@ class Solution(object):
                 start = used[c] + 1
             else:
                 max_length = max(max_length, i - start + 1)
-
             used[c] = i
-
         return max_length
 
 

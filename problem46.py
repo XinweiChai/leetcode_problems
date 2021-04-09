@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def permute(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+    def permute(self, nums: List[int]) -> List[List[int]]:
         # Loop
         # res = [[nums[0]]]
         # count = 1

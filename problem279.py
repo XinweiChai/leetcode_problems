@@ -1,12 +1,7 @@
 class Solution(object):
     table = {}
 
-    def numSquares(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
-
+    def numSquares(self, n: int) -> int:
         # if n in self.table:
         #     return self.table[n]
         # trial_max = int(n ** 0.5)

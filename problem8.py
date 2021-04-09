@@ -1,9 +1,5 @@
 class Solution(object):
-    def myAtoi(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+    def myAtoi(self, s: str) -> int:
         p = 0
         res = 0
         while p < len(s) and s[p] == ' ':

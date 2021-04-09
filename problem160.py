@@ -1,15 +1,7 @@
-# Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+from ListNode import ListNode
 
 class Solution(object):
-    def getIntersectionNode(self, headA, headB):
-        """
-        :type head1, head1: ListNode
-        :rtype: ListNode
-        """
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         # if not headA or not headB:
         #     return None
         # countA = 0

@@ -1,11 +1,5 @@
 class Solution(object):
-    def multiply(self, num1, num2):
-        """
-        :type num1: str
-        :type num2: str
-        :rtype: str
-        """
-
+    def multiply(self, num1: str, num2: str) -> str:
         def to_num(c):
             return ord(c) - ord('0')
 

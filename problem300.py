@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def lengthOfLIS(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def lengthOfLIS(self, nums: List[int]) -> int:
         # DP
         # table = [1]
         # for i in range(1, len(nums)):

@@ -1,17 +1,8 @@
-# Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from ListNode import ListNode
 
 
 class Solution(object):
-    def addTwoNumbers(self, l1, l2):
-        """
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-        """
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         add_one = False
         sum_node = ListNode(0)
         savehead = sum_node

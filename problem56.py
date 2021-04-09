@@ -2,7 +2,7 @@ class Solution(object):
     def merge(self, intervals):
         """
         :type intervals: List[List[int]]
-        :rtype: List[List[int]]
+        :rtype -> List[List[int]]
         """
         intervals = sorted(intervals, key=lambda x: x[0])
         merged = [intervals[0]]

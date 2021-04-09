@@ -1,8 +1,10 @@
+from typing import List
+
+
 class Solution(object):
-    def setZeroes(self, matrix):
+    def setZeroes(self, matrix: List[List[int]]):
         """
-        :type matrix: List[List[int]]
-        :rtype: None Do not return anything, modify matrix in-place instead.
+        Do not return anything, modify matrix in-place instead.
         """
         r = len(matrix)
         c = len(matrix[0])

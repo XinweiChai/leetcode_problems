@@ -11,7 +11,7 @@ class Trie(object):
         """
         Inserts a word into the trie.
         :type word: str
-        :rtype: None
+        :rtype -> None
         """
         self.w_set.add(word)
         cur = self.w_dict
@@ -24,7 +24,7 @@ class Trie(object):
         """
         Returns if the word is in the trie.
         :type word: str
-        :rtype: bool
+        :rtype -> bool
         """
         return word in self.w_set
 
@@ -32,7 +32,7 @@ class Trie(object):
         """
         Returns if there is any word in the trie that starts with the given prefix.
         :type prefix: str
-        :rtype: bool
+        :rtype -> bool
         """
         cur = self.w_dict
         for i in prefix:

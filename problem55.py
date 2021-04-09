@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def canJump(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
+    def canJump(self, nums: List[int]) -> bool:
         if len(nums) == 1:
             return True
         p = 0

@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def maxProduct(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def maxProduct(self, nums: List[int]) -> int:
         # if len(nums) == 1:
         #     return nums[0]
         # left = 0

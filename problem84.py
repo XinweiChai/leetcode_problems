@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def largestRectangleArea(self, heights):
-        """
-        :type heights: List[int]
-        :rtype: int
-        """
+    def largestRectangleArea(self, heights: List[int]) -> int:
         # def rec(left, right):
         #     if left == right:
         #         return 0

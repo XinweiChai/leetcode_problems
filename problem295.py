@@ -14,7 +14,7 @@ class MedianFinder(object):
     def addNum(self, num):
         """
         :type num: int
-        :rtype: None
+        :rtype -> None
         """
         self.count += 1
         heapq.heappush(self.lo, num)
@@ -24,7 +24,7 @@ class MedianFinder(object):
 
     def findMedian(self):
         """
-        :rtype: float
+        :rtype -> float
         """
         if self.count % 2 == 1:
             return self.lo[0]

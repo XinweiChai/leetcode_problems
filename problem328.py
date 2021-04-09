@@ -1,14 +1,8 @@
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+from ListNode import ListNode
+
+
 class Solution(object):
-    def oddEvenList(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
+    def oddEvenList(self, head: ListNode) -> ListNode:
         if not head or not head.next:
             return head
         odd = head

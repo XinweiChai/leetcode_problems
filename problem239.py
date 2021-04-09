@@ -1,13 +1,9 @@
 import collections
+from typing import List
 
 
 class Solution(object):
-    def maxSlidingWindow(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: List[int]
-        """
+    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         n = len(nums)
         r = []
         q = collections.deque()

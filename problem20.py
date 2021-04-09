@@ -1,9 +1,5 @@
 class Solution(object):
-    def isValid(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
+    def isValid(self, s: str) -> bool:
         par_list = []
         for i in s:
             if i in ['(', '[', '{']:

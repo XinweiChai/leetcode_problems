@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def jump(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def jump(self, nums: List[int]) -> int:
         # if len(nums) == 1:
         #     return 0
         # times = [pow(10, 5) + 1] * len(nums)

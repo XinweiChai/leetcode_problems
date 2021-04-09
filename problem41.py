@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def firstMissingPositive(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def firstMissingPositive(self, nums: List[int]) -> int:
         # O(nlogn)
         # nums.sort()
         # num = 1

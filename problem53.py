@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def maxSubArray(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def maxSubArray(self, nums: List[int]) -> int:
         max_so_far = nums[0]
         max_ending_here = nums[0]
         for i in range(1, len(nums)):

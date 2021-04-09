@@ -1,10 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def wordBreak(self, s, wordDict):
-        """
-        :type s: str
-        :type wordDict: List[str]
-        :rtype: bool
-        """
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         wordDict = set(wordDict)
 
         dp_table = [False] * len(s)

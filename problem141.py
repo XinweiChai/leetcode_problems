@@ -1,15 +1,8 @@
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+from ListNode import ListNode
+
 
 class Solution(object):
-    def hasCycle(self, head):
-        """
-        :type head: ListNode
-        :rtype: bool
-        """
+    def hasCycle(self, head: ListNode) -> bool:
         try:
             slow = head
             fast = head.next

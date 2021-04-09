@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def trap(self, height):
-        """
-        :type height: List[int]
-        :rtype: int
-        """
+    def trap(self, height: List[int]) -> int:
         # p = 0
         #
         # def find_right(p_left):

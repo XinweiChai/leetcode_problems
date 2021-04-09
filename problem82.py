@@ -1,21 +1,8 @@
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-    def print_all(self):
-        print(self.val)
-        if self.next:
-            self.next.print_all()
+from ListNode import ListNode
 
 
 class Solution(object):
-    def deleteDuplicates(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
         sentinel = ListNode(101, head)
         pred = sentinel
         while head:

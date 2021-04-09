@@ -3,7 +3,7 @@ class Solution(object):
         """
         :type board: List[List[str]]
         :type word: str
-        :rtype: bool
+        :rtype -> bool
         """
         r = len(board)
         c = len(board[0])

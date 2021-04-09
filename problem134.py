@@ -1,10 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def canCompleteCircuit(self, gas, cost):
-        """
-        :type gas: List[int]
-        :type cost: List[int]
-        :rtype: int
-        """
+    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
         # Stupid traversal
         # l = len(gas)
         # for i in range(l):

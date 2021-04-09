@@ -1,9 +1,11 @@
 import collections
+from typing import List
+
+
 class Solution(object):
-    def gameOfLife(self, board):
+    def gameOfLife(self, board: List[List[int]]):
         """
-        :type board: List[List[int]]
-        :rtype: None Do not return anything, modify board in-place instead.
+        Do not return anything, modify board in-place instead.
         """
         r = len(board)
         c = len((board[0]))

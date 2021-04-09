@@ -1,9 +1,5 @@
 class Solution(object):
-    def numDecodings(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+    def numDecodings(self, s: str) -> int:
         cnt = [0] * (len(s) + 2)
         cnt[-1], cnt[-2] = 1, 1
         for i in range(len(s) - 1, -1, -1):

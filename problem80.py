@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def removeDuplicates(self, nums: List[int]) -> int:
         i = 0
         for n in nums:
             if i < 2 or n > nums[i - 2]:

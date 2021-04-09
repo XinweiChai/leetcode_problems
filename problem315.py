@@ -1,10 +1,8 @@
-class Solution(object):
-    def countSmaller(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
+from typing import List
 
+
+class Solution(object):
+    def countSmaller(self, nums: List[int]) -> List[int]:
         # def binary_search(left, right, num):
         #     if left == right:
         #         return left

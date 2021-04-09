@@ -1,10 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def findWords(self, board, words):
-        """
-        :type board: List[List[str]]
-        :type words: List[str]
-        :rtype: List[str]
-        """
+    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         coord = {}
         for i in range(ord('a'), ord('z') + 1):
             coord[chr(i)] = []

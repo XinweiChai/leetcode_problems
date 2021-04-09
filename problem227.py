@@ -2,11 +2,7 @@ import re
 
 
 class Solution(object):
-    def calculate(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+    def calculate(self, s: str) -> int:
         s = s.replace(' ', '')
         nums = re.split('[+\-*/]', s)
         nums = [int(i) for i in nums]

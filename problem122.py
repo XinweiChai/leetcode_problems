@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
+    def maxProfit(self, prices: List[int]) -> int:
         buy = 0
         profit = 0
         while buy < len(prices) - 1:

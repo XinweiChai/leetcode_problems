@@ -3,7 +3,7 @@ class Solution(object):
         """
         :type x: float
         :type n: int
-        :rtype: float
+        :rtype -> float
         """
         if n == 0:
             return 1

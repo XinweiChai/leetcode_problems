@@ -1,9 +1,5 @@
 class Solution(object):
-    def countAndSay(self, n):
-        """
-        :type n: int
-        :rtype: str
-        """
+    def countAndSay(self, n: int) -> str:
         s = "1"
         for i in range(n - 1):
             p = 0

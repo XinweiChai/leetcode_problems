@@ -1,14 +1,10 @@
 import math
 import sys
+from typing import List
 
 
 class Solution(object):
-    def maxPoints(self, points):
-        """
-        :type points: List[List[int]]
-        :rtype: int
-        """
-
+    def maxPoints(self, points: List[List[int]]) -> int:
         def max_points_on_a_line_containing_point_i(i):
             """
             Compute the max number of points

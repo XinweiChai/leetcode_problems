@@ -3,7 +3,7 @@ class Solution(object):
         """
         :type s: str
         :type numRows: int
-        :rtype: str
+        :rtype -> str
         """
         if numRows == 1:
             return s

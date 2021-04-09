@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def permuteUnique(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         freq = {}
         for i in nums:
             if i in freq:

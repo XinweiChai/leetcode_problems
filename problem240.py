@@ -1,10 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def searchMatrix(self, matrix, target):
-        """
-        :type matrix: List[List[int]]
-        :type target: int
-        :rtype: bool
-        """
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         r = len(matrix)
         c = len(matrix[0])
         # O(r*logc) or O(c*logr)

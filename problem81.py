@@ -1,11 +1,8 @@
-class Solution(object):
-    def search(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: bool
-        """
+from typing import List
 
+
+class Solution(object):
+    def search(self, nums: List[int], target: int) -> bool:
         # Cheat with O(n)
         # return target in nums
         def fast_bin_search(start, end):

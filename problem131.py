@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def partition(self, s):
-        """
-        :type s: str
-        :rtype: List[List[str]]
-        """
+    def partition(self, s: str) -> List[List[str]]:
         table = [[False] * (len(s)) for _ in range(len(s))]
         for i in range(len(s)):
             table[i][i] = True

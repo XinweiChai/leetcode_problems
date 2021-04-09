@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def longestConsecutive(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def longestConsecutive(self, nums: List[int]) -> int:
         # # Sort O(nlogn)
         # if not nums:
         #     return 0

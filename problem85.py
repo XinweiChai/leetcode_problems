@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def maximalRectangle(self, matrix):
-        """
-        :type matrix: List[List[str]]
-        :rtype: int
-        """
+    def maximalRectangle(self, matrix: List[List[str]]) -> int:
         def rec(left, right):
             if left == right:
                 return 0

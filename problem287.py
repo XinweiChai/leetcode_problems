@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def findDuplicate(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def findDuplicate(self, nums: List[int]) -> int:
         tortoise = nums[0]
         hare = nums[nums[0]]
         while tortoise != hare:

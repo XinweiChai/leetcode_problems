@@ -1,17 +1,8 @@
-# Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from ListNode import ListNode
 
 
 class Solution(object):
-    def partition(self, head, x):
-        """
-        :type head: ListNode
-        :type x: int
-        :rtype: ListNode
-        """
+    def partition(self, head: ListNode, x: int) -> ListNode:
         if not head:
             return None
         list_left = ListNode(201)

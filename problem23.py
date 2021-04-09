@@ -1,11 +1,6 @@
-# Definition for singly-linked list.
+from typing import List
+from ListNode import ListNode
 from queue import PriorityQueue
-
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
 
 
 class Solution:
@@ -23,11 +18,7 @@ class Solution:
     #     head.next = l1 or l2
     #     return sentinel.next
 
-    def mergeKLists(self, lists):
-        """
-        :type lists: List[ListNode]
-        :rtype: ListNode
-        """
+    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         # Stupid solution: merge one by one
         # cur = lists[0]
         # for i in range(1, len(lists)):

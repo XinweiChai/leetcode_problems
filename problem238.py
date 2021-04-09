@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def productExceptSelf(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
         top = [1] * len(nums)
         # Top triangle
         temp = 1

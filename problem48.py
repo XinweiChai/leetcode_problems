@@ -1,8 +1,10 @@
+from typing import List
+
+
 class Solution(object):
-    def rotate(self, matrix):
+    def rotate(self, matrix: List[List[int]]):
         """
-        :type matrix: List[List[int]]
-        :rtype: None Do not return anything, modify matrix in-place instead.
+        Do not return anything, modify matrix in-place instead.
         """
         side = len(matrix)
         for i in range(side // 2):
