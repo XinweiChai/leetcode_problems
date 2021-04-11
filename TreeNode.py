@@ -51,7 +51,7 @@ class TreeNode:
                 right = ' ' * (len(ans[i + 1][j * 2 + 1]) - len(ans[i][j]))
                 ans[i][j] = left + ans[i][j] + right
 
-        for i in range(len(ans)-1):
+        for i in range(len(ans) - 1):
             for j in range(len(ans[i])):
                 left = ' ' * (2 ** (len(ans) - 1 - i) - 1)
                 right = (2 ** (len(ans) - 1 - i) - 1)
@@ -85,4 +85,5 @@ def create_tree(l: List[List]):
     return root
 
 
-create_tree([[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]]).print_all()
+if __name__ == '__main__':
+    create_tree([[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]]).print_all()
