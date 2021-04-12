@@ -34,17 +34,9 @@ class TreeNode:
                     temp.append(None)
             cur = temp
             ans.append(res)
-        print(ans)
+        temp = ans
 
         ans = [[str(j) if j is not None else ' ' for j in i] for i in ans]
-        # for i in range(len(ans) - 2, -1, -1):
-        #     for j in range(len(ans[i])):
-        #         ans[i][j] = ' ' * ((len(ans[i + 1][j * 2]) + len(ans[i + 1][j * 2])) // 2 - len(ans[i][j])) + ans[i][j] + ' ' * ((len(ans[i + 1][j * 2]) + len(ans[i + 1][j * 2])) // 2 - len(ans[i][j]))
-        # res = [' ' * (2 ** (len(ans) - i - 1) - 1) + (' ' * (2 ** (len(ans) - i) - 1)).join(ans[i]) + ' ' * (
-        #         2 ** (len(ans) - i - 1) - 1) for i in range(len(ans))]
-        # for i in res:
-        #     print(i)
-
         for i in range(len(ans) - 2, -1, -1):
             for j in range(len(ans[i])):
                 left = ' ' * (len(ans[i + 1][j * 2]) - len(ans[i][j]))
@@ -59,6 +51,7 @@ class TreeNode:
 
         for i in ans:
             print(' '.join(i))
+        return temp
 
 
 def create_tree(l: List[List]):
@@ -85,5 +78,26 @@ def create_tree(l: List[List]):
     return root
 
 
+def morris_traversal(root: TreeNode) -> None:
+    while root:
+        if not root.left:
+            print(root.val)
+            root = root.right
+        else:
+            pred = root.left
+            while pred.right and pred.right != root:
+                pred = pred.right
+            if not pred.right:
+                # print(root.val)  # Preorder
+                pred.right = root
+                root = root.left
+            else:
+                print(root.val)  # Inorder
+                pred.right = None
+                root = root.right
+
+
 if __name__ == '__main__':
-    create_tree([[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]]).print_all()
+    x = create_tree([[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]])
+    x.print_all()
+    morris_traversal(x)
