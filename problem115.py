@@ -1,20 +1,5 @@
 class Solution:
-    # def numDistinct(self, s: str, t: str) -> int:
-    #     cnt = 0
-    #
-    #     def rec(s, t):
-    #         nonlocal cnt
-    #         if not t:
-    #             cnt += 1
-    #             return
-    #         if len(s) < len(t):
-    #             return
-    #         if s[0] == t[0]:
-    #             self.numDistinct(s[1:], t[1:])
-    #         self.numDistinct(s[1:], t)
-    #
-    #     rec(s, t)
-    #     return cnt
+    # O(n^2) space
     # def numDistinct(self, s, t):
     #     l1, l2 = len(s) + 1, len(t) + 1
     #     dp = [[1] * l2 for _ in range(l1)]
