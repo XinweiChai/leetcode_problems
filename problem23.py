@@ -1,6 +1,7 @@
 from typing import List
 from ListNode import ListNode, create_list
 from queue import PriorityQueue
+import heapq
 
 
 class Solution:
@@ -59,17 +60,31 @@ class Solution:
         # return sentinel.next
 
         # Use priorityQueue in python
+        # sentinel = ListNode()
+        # head = sentinel
+        # q = PriorityQueue()
+        # for index, i in enumerate(lists):
+        #     if i:
+        #         q.put((i.val, index, i))
+        # while not q.empty():
+        #     _, index, head.next = q.get()
+        #     head = head.next
+        #     if head.next:
+        #         q.put((head.next.val, index, head.next))
+        # return sentinel.next
+
+        # Using equivalent heap, faster
         sentinel = ListNode()
         head = sentinel
-        q = PriorityQueue()
+        q = []
         for index, i in enumerate(lists):
             if i:
-                q.put((i.val, index, i))
-        while not q.empty():
-            _, index, head.next = q.get()
+                heapq.heappush(q, (i.val, index, i))
+        while q:
+            _, index, head.next = heapq.heappop(q)
             head = head.next
             if head.next:
-                q.put((head.next.val, index, head.next))
+                heapq.heappush(q, (head.next.val, index, head.next))
         return sentinel.next
 
 

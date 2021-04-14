@@ -17,7 +17,7 @@ class Solution:
 
         # Using 1 stack
         stack = [-1]
-        maxans = 0
+        max_par = 0
         for i in range(len(s)):
             if s[i] == '(':
                 stack.append(i)
@@ -26,7 +26,8 @@ class Solution:
                 if not stack:
                     stack.append(i)
                 else:
-                    maxans = max(maxans, i-stack[-1])
-        return maxans
+                    max_par = max(max_par, i - stack[-1])
+        return max_par
+
 
 print(Solution().longestValidParentheses(")(()((())"))

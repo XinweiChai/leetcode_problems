@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution(object):
     def letterCombinations(self, digits: str) -> List[str]:
         if not digits:
