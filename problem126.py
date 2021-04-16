@@ -36,7 +36,8 @@ class Solution:
 
         # Two-way BFS
         tree, wordList, n = collections.defaultdict(set), set(wordList), len(beginWord)
-        if endWord not in wordList: return []
+        if endWord not in wordList:
+            return []
         found, bq, eq, nq, rev = False, {beginWord}, {endWord}, set(), False
         while bq and not found:
             wordList -= set(bq)
@@ -50,15 +51,36 @@ class Solution:
                                 found = True
                             else:
                                 nq.add(y)
-                            tree[y].add(x) if rev else tree[x].add(y)
+                            # tree[x].add(y) if rev else tree[y].add(x)
+                            # Code using dict
+                            if rev:
+                                if x in tree:
+                                    tree[x].add(y)
+                                else:
+                                    tree[x] = {y}
+                            else:
+                                if y in tree:
+                                    tree[y].add(x)
+                                else:
+                                    tree[y] = {x}
             bq, nq = nq, set()
             if len(bq) > len(eq):
                 bq, eq, rev = eq, bq, not rev
 
         def bt(x):
-            return [[x]] if x == endWord else [[x] + rest for y in tree[x] for rest in bt(y)]
+            # For better performance, using dict instead of defaultdict
+            if x == beginWord:
+                return [[x]]
+            else:
+                temp = []
+                if x in tree:
+                    for y in tree[x]:
+                        for rest in bt(y):
+                            temp.append(rest + [x])
+            return temp
+            # return [[x]] if x == beginWord else [rest + [x] for y in tree[x] for rest in bt(y)]
 
-        return bt(beginWord)
+        return bt(endWord)
 
 
 # print(Solution().findLadders("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))
