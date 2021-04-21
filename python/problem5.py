@@ -21,6 +21,7 @@ class Solution(object):
         # return longest
 
         # Manacher's Algorithm O(n)
+
         if len(s) <= 1:
             return s
         min_left, max_len = 0, 1
