@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         r = len(board)
         for i in range(r):

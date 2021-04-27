@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def maximalRectangle(self, matrix: List[List[str]]) -> int:
         def rec(left, right):
             if left == right:

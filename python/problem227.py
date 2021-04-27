@@ -1,7 +1,7 @@
 import re
 
 
-class Solution(object):
+class Solution:
     def calculate(self, s: str) -> int:
         s = s.replace(' ', '')
         nums = re.split('[+\-*/]', s)

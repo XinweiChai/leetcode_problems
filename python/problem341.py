@@ -2,7 +2,7 @@
 # This is the interface that allows for creating nested lists.
 # You should not implement it, or speculate about its implementation
 # """
-# class NestedInteger(object):
+# class NestedInteger:
 #
 #     def isInteger(self) -> bool:
 #         """
@@ -22,7 +22,7 @@
 #         """
 
 
-class NestedIterator(object):
+class NestedIterator:
 
     def __init__(self, nestedList):
         self.stack = [[nestedList, 0]]

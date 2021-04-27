@@ -15,7 +15,7 @@ class Solution {
             throw "Value Error";
         }
         int imin = 0, imax = m, half_len = (m + n + 1) / 2;
-        float maxOfLeft, minOfRight;
+        int maxOfLeft, minOfRight;
         while (imin <= imax) {
             int i = (imin + imax) / 2;
             int j = half_len - i;
@@ -32,7 +32,7 @@ class Solution {
                     maxOfLeft = max(A[i - 1], B[j - 1]);
                 }
                 if ((m + n) % 2 == 1) {
-                    return maxOfLeft;
+                    return float(maxOfLeft);
                 }
                 if (i == m) {
                     minOfRight = B[j];
@@ -41,7 +41,7 @@ class Solution {
                 } else {
                     minOfRight = min(A[i], B[j]);
                 }
-                return (maxOfLeft + minOfRight) / 2.0;
+                return float((maxOfLeft + minOfRight) / 2.0);
             }
         }
         return 0.0;

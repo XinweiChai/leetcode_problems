@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def grayCode(self, n: int) -> List[int]:
         ans = [0] * (1 << n)
         for i in range(1 << n):

@@ -2,7 +2,7 @@ from TreeNode import TreeNode
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
         map_inorder = {}
         for i, val in enumerate(inorder):

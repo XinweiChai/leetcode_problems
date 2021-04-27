@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         if not matrix: return []
         R, C = len(matrix), len(matrix[0])

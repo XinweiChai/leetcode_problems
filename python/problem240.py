@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         r = len(matrix)
         c = len(matrix[0])

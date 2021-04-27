@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-class Solution(object):
+class Solution:
     def isScramble(self, s1: str, s2: str) -> bool:
         if len(s1) <= 1:
             return s1 == s2

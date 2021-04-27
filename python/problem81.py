@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def search(self, nums: List[int], target: int) -> bool:
         # Cheat with O(n)
         # return target in nums

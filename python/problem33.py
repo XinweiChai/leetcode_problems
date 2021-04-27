@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def search(self, nums: List[int], target: int) -> int:
         def rec_search(left, right):
             if left == right:

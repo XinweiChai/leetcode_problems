@@ -1,7 +1,7 @@
 from typing import List
 from collections import defaultdict
 
-class Solution(object):
+class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
         # graph = [[] for _ in range(numCourses)]
         # rev_graph = [[] for _ in range(numCourses)]

@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def rotate(self, matrix: List[List[int]]):
         """
         Do not return anything, modify matrix in-place instead.

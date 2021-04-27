@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         top = [1] * len(nums)
         # Top triangle

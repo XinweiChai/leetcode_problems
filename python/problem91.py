@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def numDecodings(self, s: str) -> int:
         count = [0] * (len(s) + 2)
         count[-1], count[-2] = 1, 1

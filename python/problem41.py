@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         # O(nlogn)
         # nums.sort()

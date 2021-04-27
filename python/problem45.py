@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def jump(self, nums: List[int]) -> int:
         # if len(nums) == 1:
         #     return 0

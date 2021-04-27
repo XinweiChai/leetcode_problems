@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def longestPalindrome(self, s: str) -> str:
         # Expand around center, O(n^2)
         # longest = ''

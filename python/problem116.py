@@ -1,5 +1,5 @@
 # Definition for a Node.
-class Node(object):
+class Node:
     def __init__(self, val=0, left=None, right=None, next=None):
         self.val = val
         self.left = left
@@ -7,7 +7,7 @@ class Node(object):
         self.next = next
 
 
-class Solution(object):
+class Solution:
     def connect(self, root: Node) -> Node:
         # def rec(nodes):
         #     if nodes[0]:

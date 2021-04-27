@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         maxCur = 0
         maxSoFar = 0

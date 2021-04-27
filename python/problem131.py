@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def partition(self, s: str) -> List[List[str]]:
         table = [[False] * (len(s)) for _ in range(len(s))]
         for i in range(len(s)):

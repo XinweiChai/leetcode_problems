@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def trap(self, height: List[int]) -> int:
         # p = 0
         #

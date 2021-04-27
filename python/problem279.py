@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     table = {}
 
     def numSquares(self, n: int) -> int:

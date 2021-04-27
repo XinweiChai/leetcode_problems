@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         l = 0
         r = len(nums) - 1

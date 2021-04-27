@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def canJump(self, nums: List[int]) -> bool:
         if len(nums) == 1:
             return True

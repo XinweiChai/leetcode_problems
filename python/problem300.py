@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         # DP
         # table = [1]

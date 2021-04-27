@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def isValid(self, s: str) -> bool:
         par_list = []
         for i in s:

@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
         # Stupid traversal
         # l = len(gas)

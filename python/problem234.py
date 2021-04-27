@@ -1,11 +1,8 @@
-from ListNode import ListNodeclass ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from ListNode import ListNode
 
 
-class Solution(object):
-    def isPalindrome(self, head):
+class Solution:
+    def isPalindrome(self, head:ListNode):
         rev = None
         slow = fast = head
         while fast and fast.next:

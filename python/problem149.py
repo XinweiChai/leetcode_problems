@@ -3,7 +3,7 @@ import sys
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def maxPoints(self, points: List[List[int]]) -> int:
         def max_points_on_a_line_containing_point_i(i):
             """

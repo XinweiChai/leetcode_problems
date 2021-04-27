@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def multiply(self, num1: str, num2: str) -> str:
         def to_num(c):
             return ord(c) - ord('0')

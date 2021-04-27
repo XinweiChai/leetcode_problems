@@ -1,7 +1,7 @@
 from ListNode import ListNode
 
 
-class Solution(object):
+class Solution:
     def partition(self, head: ListNode, x: int) -> ListNode:
         if not head:
             return None

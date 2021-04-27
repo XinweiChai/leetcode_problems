@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def threeSum(self, nums):
         res = []
         nums.sort()

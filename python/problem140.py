@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         wordDict = set(wordDict)
 

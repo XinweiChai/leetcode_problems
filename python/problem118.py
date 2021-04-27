@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
         ans = [[1], [1, 1]]
         for i in range(2, numRows):

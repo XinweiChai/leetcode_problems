@@ -1,7 +1,7 @@
 from ListNode import ListNode
 
 
-class Solution(object):
+class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         init = head
         while head and head.next:

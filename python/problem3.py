@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         used = {}
         max_length = start = 0

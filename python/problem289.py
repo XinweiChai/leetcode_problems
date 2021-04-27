@@ -2,7 +2,7 @@ import collections
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def gameOfLife(self, board: List[List[int]]):
         """
         Do not return anything, modify board in-place instead.

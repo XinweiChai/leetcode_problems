@@ -1,7 +1,7 @@
 from heapq import heappush, heappop, heapify
 
 
-class Solution(object):
+class Solution:
     def getSkyline(self, buildings):
         # add start-building events
         # also add end-building events(acts as buildings with 0 height)

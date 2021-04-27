@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def solve(self, board: List[List[str]]):
         """
         Do not return anything, modify board in-place instead.

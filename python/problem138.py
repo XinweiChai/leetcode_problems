@@ -6,7 +6,7 @@ class Node:
         self.random = random
 
 
-class Solution(object):
+class Solution:
     def copyRandomList(self, head: Node) -> Node:
         # Stupid deep copy
         # if not head:

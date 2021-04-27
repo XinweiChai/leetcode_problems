@@ -1,4 +1,4 @@
-class Trie(object):
+class Trie:
 
     def __init__(self):
         """

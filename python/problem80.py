@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         i = 0
         for n in nums:

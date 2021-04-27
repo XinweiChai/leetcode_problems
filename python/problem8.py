@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def myAtoi(self, s: str) -> int:
         p = 0
         res = 0

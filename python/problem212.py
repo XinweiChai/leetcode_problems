@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         coord = {}
         for i in range(ord('a'), ord('z') + 1):

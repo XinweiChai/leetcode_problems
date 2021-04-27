@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         # # Sort O(nlogn)
         # if not nums:

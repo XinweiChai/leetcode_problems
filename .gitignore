@@ -3,3 +3,4 @@ __pycache__/
 *.gch
 .vscode/
 *.o
+cmake-build-debug/

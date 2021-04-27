@@ -2,7 +2,7 @@ from typing import List
 from TreeNode import TreeNode
 
 
-class Solution(object):
+class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         if not root:
             return []

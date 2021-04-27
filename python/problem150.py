@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack = []
         for i in tokens:

@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         max_so_far = nums[0]
         max_ending_here = nums[0]

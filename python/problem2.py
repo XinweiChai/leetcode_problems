@@ -1,7 +1,7 @@
 from ListNode import ListNode, create_list
 
 
-class Solution(object):
+class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         add_one = False
         sum_node = ListNode(0)

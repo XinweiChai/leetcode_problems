@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def countAndSay(self, n: int) -> str:
         s = "1"
         for i in range(n - 1):

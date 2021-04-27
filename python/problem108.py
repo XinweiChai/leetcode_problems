@@ -2,7 +2,7 @@ from typing import List
 from TreeNode import TreeNode
 
 
-class Solution(object):
+class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
         if nums:
             l = len(nums) // 2

@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def fractionToDecimal(self, numerator: int, denominator: int) -> str:
         n, remainder = divmod(abs(numerator), abs(denominator))
         sign = '-' if numerator * denominator < 0 else ''

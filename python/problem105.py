@@ -2,7 +2,7 @@ from typing import List
 from TreeNode import TreeNode
 
 
-class Solution(object):
+class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
 
         # Concise version but takes time and space

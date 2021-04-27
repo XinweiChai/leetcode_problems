@@ -2,7 +2,7 @@ from collections import Counter
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def subsetsWithDup(self, nums: List[int])->List[List[int]]:
         nums = Counter(nums)
         res = [[]]

@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
         if not digits:
             return []

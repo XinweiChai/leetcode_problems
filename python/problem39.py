@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         # def recursion(state, sum, cur):
         #     if target == sum:

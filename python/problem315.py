@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def countSmaller(self, nums: List[int]) -> List[int]:
         # def binary_search(left, right, num):
         #     if left == right:

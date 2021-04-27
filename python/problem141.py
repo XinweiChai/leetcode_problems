@@ -1,7 +1,7 @@
 from ListNode import ListNode
 
 
-class Solution(object):
+class Solution:
     def hasCycle(self, head: ListNode) -> bool:
         try:
             slow = head

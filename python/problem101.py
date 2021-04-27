@@ -1,7 +1,7 @@
 from TreeNode import TreeNode
 
 
-class Solution(object):
+class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
         if not root.left and not root.right:
             return True

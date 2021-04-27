@@ -1,7 +1,7 @@
 import heapq
 
 
-class MedianFinder(object):
+class MedianFinder:
 
     def __init__(self):
         """

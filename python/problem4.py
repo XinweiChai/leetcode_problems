@@ -42,4 +42,4 @@ class Solution:
                 return (max_of_left + min_of_right) / 2.0
 
 
-print(Solution().findMedianSortedArrays([1, 2, 3, 4, 5], [4.5, 6,7]))
+print(Solution().findMedianSortedArrays([1, 2, 3, 4, 5], [4.5, 6, 7]))

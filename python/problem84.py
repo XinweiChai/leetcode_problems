@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
         # def rec(left, right):
         #     if left == right:

@@ -1,7 +1,7 @@
 from ListNode import ListNode, create_list
 
 
-class Solution(object):
+class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         sentinel = ListNode(101, head)
         pred = sentinel

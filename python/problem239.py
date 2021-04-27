@@ -2,7 +2,7 @@ import collections
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         n = len(nums)
         r = []

@@ -1,7 +1,7 @@
 import re
 
 
-class Solution(object):
+class Solution:
     def isMatch(self, s: str, p: str) -> bool:
         # Recursion
         # if not p:

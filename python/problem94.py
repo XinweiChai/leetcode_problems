@@ -1,7 +1,7 @@
 import TreeNode
 
 
-class Solution(object):
+class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
         l = []
 

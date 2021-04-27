@@ -1,7 +1,7 @@
 import collections
 
 
-class Solution(object):
+class Solution:
     def ladderLength(self, beginWord, endWord, wordList):
         wordList = set(wordList)
         queue = collections.deque([[beginWord, 1]])

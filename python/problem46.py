@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         # Loop
         # res = [[nums[0]]]

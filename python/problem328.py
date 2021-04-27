@@ -1,7 +1,7 @@
 from ListNode import ListNode
 
 
-class Solution(object):
+class Solution:
     def oddEvenList(self, head: ListNode) -> ListNode:
         if not head or not head.next:
             return head

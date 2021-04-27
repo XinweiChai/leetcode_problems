@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution(object):
+class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         # Find mid then search extreme
         # if not nums or target < nums[0] or target > nums[-1]:

@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def getSum(self, a: int, b: int) -> int:
         mask = 0xffffffff
         while b & mask != 0:
