@@ -1,6 +1,11 @@
 #include <iostream>
 #include <vector>
-using namespace std;
+using std::cout;
+using std::endl;
+using std::max;
+using std::min;
+using std::swap;
+using std::vector;
 
 class Solution {
    public:

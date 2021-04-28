@@ -1,8 +1,11 @@
-#include <string>
-
 #include <iostream>
+#include <string>
 #include <unordered_map>
-using namespace std;
+using std::cout;
+using std::endl;
+using std::max;
+using std::string;
+using std::unordered_map;
 
 class Solution {
    public:
