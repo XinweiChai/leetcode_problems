@@ -1,9 +1,11 @@
+#include <iostream>
 #include <vector>
 using namespace std;
 
 // Time complexity O(nlogn) by using fenwick tree.
 int BIT[100005], a[100005], n;
 void update(int x, int delta) {
+    // x & -x gets the maximum 2^k factor of x
     for (; x <= n; x += x & -x) {
         BIT[x] += delta;
     }
@@ -32,4 +34,9 @@ long minimumOperations(vector<int> numbers) {
         update(numbers[i], 1);
     }
     return ans;
+}
+
+int main(int argc, char const *argv[]) {
+    cout << minimumOperations({10, 6, 2, 3, 7, 1, 2});
+    return 0;
 }
