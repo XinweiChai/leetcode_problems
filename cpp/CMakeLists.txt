@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(problem001 problem1.cpp)
 add_executable(problem002 problem2.cpp ListNode.cpp)
 add_executable(problem003 problem3.cpp)
 add_executable(problem004 problem4.cpp)
