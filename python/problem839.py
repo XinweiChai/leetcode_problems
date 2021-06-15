@@ -30,7 +30,6 @@ class DisjointSet:
             self.v[i] = self.find(self.v[i])
         return self.v[i]
 
-
     def join(self, i, j):
         ri = self.find(i)
         rj = self.find(j)

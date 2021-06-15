@@ -61,7 +61,7 @@ class BSTIterator(object):
 
 if __name__ == '__main__':
     # Your BSTIterator object will be instantiated and called as such:
-    tree = create_tree(TreeNode, [[1], [2, 3], [4, 5, 6, 7]])
+    tree = create_tree([[1], [2, 3], [4, 5, 6, 7]])
     obj = BSTIterator(tree)
     print(obj.hasNext())
     print(obj.next())

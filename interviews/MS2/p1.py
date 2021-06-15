@@ -1,37 +1,49 @@
+"""
+Given a list of strings, show the frequency of a given substring
+"""
 from typing import List
 
 
-def minGroup(ls: List[str]) -> int:
-    def similar(s1, s2):
-        if s1 == s2:
-            return True
-        if len(s1) != len(s2):
-            return False
-        pair = None
-        flag = True
-        for i in range(len(s1)):
-            if s1[i] != s2[i]:
-                if not pair:
-                    pair = (s1[i], s2[i])
-                elif flag:
-                    flag = False
-                    if (s2[i], s1[i]) != pair:
-                        return False
-                else:
-                    return False
-        return True
+class WordTree:
+    def __init__(self, cnt=0):
+        self.children = {}
+        self.cnt = cnt
 
-    d = {}
+    def add_child(self, c):
+        if c in self.children:
+            self.children[c].cnt += 1
+        else:
+            self.children[c] = WordTree(1)
+
+
+def make_tree(ls: List[str]):
+    wt = WordTree()
+    for i in ls:
+        cur = wt
+        for j in i:
+            cur.add_child(j)
+            cur = cur.children[j]
+    return wt
+
+
+def count_sub(sub, wt):
     cnt = 0
-    for i in range(len(ls)):
-        if i not in d:
-            cnt += 1
-            d[i] = cnt
-        for j in range(i + 1, len(ls)):
-            if similar(ls[i], ls[j]):
-                d[j] = cnt
+
+    def rec(root, ptr):
+        nonlocal cnt
+        if ptr == len(sub) - 1:
+            cnt += root.cnt
+            return
+        for i in root.children:
+            if sub[ptr] == i:
+                rec(root.children[i], ptr + 1)
+            else:
+                rec(root.children[i], ptr)
+
+    rec(wt, 0)
     return cnt
 
 
 if __name__ == '__main__':
-    print(minGroup(ls=['abcd', 'aaaa', 'dcba', 'qwer']))
+    t = make_tree(['abc', 'bca', 'acb', 'dc'])
+    print(count_sub('bc', t))

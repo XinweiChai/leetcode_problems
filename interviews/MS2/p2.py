@@ -1,45 +1,37 @@
 from typing import List
 
 
-def removeBrick(board: List[List[int]], x: int, y: int):
-    if board[x][y] == 0:
-        return board
-    r = len(board)
-    c = len(board[0])
-    board[x][y] = 0
+def minGroup(ls: List[str]) -> int:
+    def similar(s1, s2):
+        if s1 == s2:
+            return True
+        if len(s1) != len(s2):
+            return False
+        pair = None
+        flag = True
+        for i in range(len(s1)):
+            if s1[i] != s2[i]:
+                if not pair:
+                    pair = (s1[i], s2[i])
+                elif flag:
+                    flag = False
+                    if (s2[i], s1[i]) != pair:
+                        return False
+                else:
+                    return False
+        return True
 
-    def neighbors(x, y):
-        ans = set()
-        dxdy = [[1, 0], [0, 1], [-1, 0], [0, -1]]
-        for i in dxdy:
-            if 0 <= x + i[0] < r and 0 <= y + i[1] < c and board[x + i[0]][y + i[1]] == 1:
-                ans.add((x + i[0], y + i[1]))
-        return ans
+    d = {}
+    cnt = 0
+    for i in range(len(ls)):
+        if i not in d:
+            cnt += 1
+            d[i] = cnt
+        for j in range(i + 1, len(ls)):
+            if similar(ls[i], ls[j]):
+                d[j] = cnt
+    return cnt
 
-    def stable(x, y):
-        dx = dy = [-1, 1]
-        xneighbor = [[x + i, y] for i in dx if 0 <= x + i < r]
-        yneighbor = [[x, y + i] for i in dy if 0 <= y + i < c]
-        res1 = True
-        for i in xneighbor:
-            if board[i[0]][i[1]] == 0:
-                res1 = False
-        res2 = True
-        for i in yneighbor:
-            if board[i[0]][i[1]] == 0:
-                res2 = False
-        return res1 or res2
 
-    flip = True
-    bricks = neighbors(x, y)
-    while flip:
-        flip = False
-        temp = set()
-        for i in list(bricks):
-            if not stable(i[0], i[1]):
-                flip = True
-                board[i[0]][i[1]] = 0
-                bricks.remove((i[0], i[1]))
-                temp.union(neighbors(i[0], i[1]))
-                bricks = temp
-    return board
+if __name__ == '__main__':
+    print(minGroup(ls=['abcd', 'aaaa', 'dcba', 'qwer']))

@@ -15,11 +15,10 @@ class DSU:
 
     def union(self, x, y):
         xr, yr = self.find(x), self.find(y)
-        if xr == yr: return
-        if self.rnk[xr] < self.rnk[yr]:
+        if xr == yr:
+            return
+        if self.sz[xr] < self.sz[yr]:
             xr, yr = yr, xr
-        if self.rnk[xr] == self.rnk[yr]:
-            self.rnk[xr] += 1
 
         self.par[yr] = xr
         self.sz[xr] += self.sz[yr]

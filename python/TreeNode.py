@@ -54,7 +54,7 @@ class TreeNode:
         return temp
 
 
-def create_tree(cl: Type, l: List[List]):
+def create_tree(l: List[List], cl: Type = TreeNode):
     assert issubclass(cl, TreeNode)
     root = cl(l[0][0])
     cur = [root]
@@ -79,26 +79,9 @@ def create_tree(cl: Type, l: List[List]):
     return root
 
 
-def morris_traversal(root: TreeNode) -> None:
-    while root:
-        if not root.left:
-            print(root.val)
-            root = root.right
-        else:
-            pred = root.left
-            while pred.right and pred.right != root:
-                pred = pred.right
-            if not pred.right:
-                # print(root.val)  # Preorder
-                pred.right = root
-                root = root.left
-            else:
-                print(root.val)  # Inorder
-                pred.right = None
-                root = root.right
+
 
 
 if __name__ == '__main__':
-    x = create_tree(TreeNode, [[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]])
-    x.print_all()
-    morris_traversal(x)
+    x = create_tree([[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]])
+    # x.print_all()
