@@ -1,17 +1,17 @@
 import TreeNode
-import queue
+from collections import deque
 
 
 def level_order(root: TreeNode):
-    cur = queue.Queue()
-    cur.put(root)
-    while not cur.empty():
-        x = cur.get()
+    cur = deque()
+    cur.append(root)
+    while len(cur):
+        x = cur.pop()
         yield x.val
         if x.left:
-            cur.put(x.left)
+            cur.append(x.left)
         if x.right:
-            cur.put(x.right)
+            cur.append(x.right)
 
 
 def pre_order(root: TreeNode):

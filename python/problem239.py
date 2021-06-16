@@ -10,7 +10,7 @@ class Solution:
         for i in range(n):
             while q and q[0] < i - k + 1:
                 q.popleft()
-            while q and nums[q[-1]] <= nums[i]:
+            if q and nums[q[-1]] <= nums[i]:
                 q.pop()
             q.append(i)
             if i >= k - 1:
