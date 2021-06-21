@@ -16,6 +16,12 @@ class Solution:
             if is_palindrome(0, i):
                 return s[:i:-1] + s
 
+    def shortestPalindrome2(self, s: str) -> str:
+        r = s[::-1]
+        for i in range(len(s) + 1):
+            if s.startswith(r[i:]):
+                return r[:i] + s
+
 
 if __name__ == '__main__':
     print(Solution().shortestPalindrome('a'))
