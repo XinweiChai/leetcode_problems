@@ -9,7 +9,7 @@ class ListNode:
             self.next.print_all()
 
 
-def create_list(*args):
+def create_list(*args) -> ListNode:
     sentinel = ListNode(0)
     head = sentinel
     # if isinstance(args[0], list):
