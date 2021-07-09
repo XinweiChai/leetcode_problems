@@ -1,3 +1,4 @@
+import bisect
 from typing import List
 
 
@@ -25,7 +26,8 @@ class Solution:
 
         l = 0
         for num in nums:
-            i = binary_search(0, l, num)
+            # i = binary_search(0, l, num)
+            i = bisect.bisect_left(dp, num, hi=l)
             dp[i] = num
             if i == l:
                 l += 1

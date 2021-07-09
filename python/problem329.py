@@ -1,3 +1,6 @@
+import itertools
+from functools import lru_cache
+from itertools import starmap
 from typing import List
 
 
@@ -23,8 +26,25 @@ class Solution:
         max_path = 0
         for i in range(r):
             for j in range(c):
-                max_path = max(max_path,dfs(i, j))
+                max_path = max(max_path, dfs(i, j))
         return max_path
 
+    # dfs + cache
+    def longestIncreasingPath2(self, matrix: List[List[int]]) -> int:
 
-print(Solution().longestIncreasingPath([[9, 9, 4], [6, 6, 8], [2, 1, 1]]))
+        m, n = len(matrix), len(matrix[0])
+
+        @lru_cache(None)
+        def max_d(r, c):
+            val = matrix[r][c]
+            return 1 + max(
+                max_d(r + 1, c) if r < m - 1 and val > matrix[r + 1][c] else 0,
+                max_d(r - 1, c) if r > 0 and val > matrix[r - 1][c] else 0,
+                max_d(r, c + 1) if c < n - 1 and val > matrix[r][c + 1] else 0,
+                max_d(r, c - 1) if c > 0 and val > matrix[r][c - 1] else 0)
+
+        return max(starmap(max_d, itertools.product(range(m), range(n))))
+
+
+if __name__ == '__main__':
+    print(Solution().longestIncreasingPath2([[9, 9, 4], [6, 6, 8], [2, 1, 1]]))
