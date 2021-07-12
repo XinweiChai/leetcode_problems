@@ -2,13 +2,7 @@ from collections import Counter
 
 
 class Solution:
-    def minWindow(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype -> str
-        """
-
+    def minWindow(self, s: str, t: str) -> str:
         # if not t or not s:
         #     return ""
         #

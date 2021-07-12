@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution:
-    def sortColors(self, nums):
-        """
-        :type nums: List[int]
-        :rtype -> None Do not return anything, modify nums in-place instead.
-        """
+    def sortColors(self, nums: List[int]) -> None:
         # Bubble sort
         # for i in range(len(nums) - 1):
         #     for j in range(len(nums)-i-1):

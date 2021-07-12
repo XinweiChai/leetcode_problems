@@ -1,10 +1,8 @@
+from typing import List
+
+
 class Solution:
-    def exist(self, board, word):
-        """
-        :type board: List[List[str]]
-        :type word: str
-        :rtype -> bool
-        """
+    def exist(self, board: List[List[str]], word: str) -> bool:
         r = len(board)
         c = len(board[0])
 

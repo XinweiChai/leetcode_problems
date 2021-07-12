@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution:
-    def groupAnagrams(self, strs):
-        """
-        :type strs: List[str]
-        :rtype -> List[List[str]]
-        """
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         ans = {}
         for s in strs:
             count = [0] * 26

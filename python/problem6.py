@@ -1,10 +1,5 @@
 class Solution:
-    def convert(self, s, numRows):
-        """
-        :type s: str
-        :type numRows: int
-        :rtype -> str
-        """
+    def convert(self, s: str, numRows: int) -> str:
         if numRows == 1:
             return s
         period = 2 * numRows - 2
