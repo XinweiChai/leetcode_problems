@@ -21,7 +21,7 @@ def pre_order(root: TreeNode):
         pre_order(root.right)
 
 
-# Put left branch to stack
+# Put left branch to stack, recommended
 def pre_order_iterative(root: TreeNode):
     s = []
     while s or root:
@@ -120,6 +120,55 @@ def morris_traversal(root: TreeNode) -> None:
                 root = root.right
 
 
+def morris_traversal_post_order(root: TreeNode) -> None:
+    if not root:
+        return
+    current = TreeNode.TreeNode(-1)
+    current.left = root
+    while current:
+        # If left child is None.
+        # Move to right child.
+        if not current.left:
+            current = current.right
+        else:
+            pre = current.left
+            # Inorder predecessor
+            while pre.right and pre.right != current:
+                pre = pre.right
+            # The connection between current
+            # and predecessor is made
+            if not pre.right:
+                # Make current as the right
+                # child of the right most node
+                pre.right = current
+                # Traverse the left child
+                current = current.left
+            else:
+                pre.right = None
+                succ = current
+                current = current.left
+                prev = None
+                # Traverse along the right
+                # subtree to the
+                # right-most child
+                while current:
+                    temp = current.right
+                    current.right = prev
+                    prev = current
+                    current = temp
+                # Traverse back
+                # to current's left child
+                # node
+                while prev:
+                    print(prev.val, end=' ')
+                    temp = prev.right
+                    prev.right = current
+                    current = prev
+                    prev = temp
+                current = succ
+                current = current.right
+
+
 if __name__ == '__main__':
     tree = TreeNode.create_tree([[1], [2, 3], [4, 5, 6, 7]])
     # for i in level_order(tree):
@@ -136,4 +185,5 @@ if __name__ == '__main__':
     # post_order(tree)
     # for i in post_order_iterative(tree):
     #     print(i)
-    morris_traversal(tree)
+    # morris_traversal(tree)
+    morris_traversal_post_order(tree)
