@@ -27,7 +27,7 @@ class Solution:
         s = []
         in_degree = [0] * numCourses
         for i in prerequisites:
-            # graph[i[1]] = graph[i[1]] | {i[0]} if i[1] in graph else {i[0]}
+            # graph[i[1]] = graph.get(i[1], set()) | {i[0]}
             graph[i[1]].add(i[0])
             in_degree[i[0]] += 1
         start = [i for i in range(len(in_degree)) if in_degree[i] == 0]
