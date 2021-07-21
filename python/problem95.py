@@ -1,4 +1,5 @@
-from TreeNode import TreeNodefrom typing import List
+from TreeNode import TreeNode
+from typing import List
 
 
 class Solution:

@@ -1,37 +1,55 @@
 from typing import List
-import itertools
 
 
 class Solution:
-    def readBinaryWatch(self, turnedOn: int) -> List[str]:
-        res = []
+    # Time out, even with cumulative sum and max and memoization
+    def splitArray(self, nums: List[int], m: int) -> int:
+        n = len(nums)
+        memo = {}
+        cumul_sum = [0] * (n + 1)
+        cumul_max = [0] * n
+        for i in range(n):
+            cumul_sum[i + 1] += cumul_sum[i] + nums[i]
+            cumul_max[-i - 1] = max(cumul_max[-i], nums[-i - 1])
 
-        def has_ones(num):
-            res = 0
-            while num:
-                res += num & 1
-                num >>= 1
-            return res
+        def dfs(pos, split):
+            if (pos, split) not in memo:
+                if split == 0:
+                    # memo[(pos, split)] = sum(nums[pos:])
+                    memo[(pos, split)] = cumul_sum[n] - cumul_sum[pos]
+                elif split == n - pos:
+                    # memo[(pos, split)] = max(nums[pos:])
+                    memo[(pos, split)] = cumul_max[pos]
+                else:
+                    # memo[(pos, split)] = min(max(sum(nums[pos:i]), dfs(i, split - 1)) for i in range(pos + 1, n - split + 1))
+                    memo[(pos, split)] = min(max(cumul_sum[i] - cumul_sum[pos], dfs(i, split - 1)) for i in range(pos + 1, n - split + 1))
+            return memo[(pos, split)]
 
-        for i in range(turnedOn + 1):
-            minutes = []
-            hours = []
-            for hour in range(12):
-                if has_ones(hour) == i:
-                    hours.append(hour)
-            for minute in range(60):
-                if has_ones(minute) == turnedOn - i:
-                    minutes.append(minute)
-            for hour, minutes in itertools.product(hours, minutes):
-                res.append(f"{hour}:{str(minutes).zfill(2)}")
-        return res
+        return dfs(0, m - 1)
 
-    # Short version
-    def readBinaryWatch2(self, turnedOn: int) -> List[str]:
-        return ['%d:%02d' % (h, m)
-                for h in range(12) for m in range(60)
-                if (bin(h) + bin(m)).count('1') == turnedOn]
+
+    def splitArray2(self, nums: List[int], m: int) -> int:
+        low, high, ans = max(nums), sum(nums), -1
+
+        def is_valid(m, mid):
+            # assume mid is < max(nums)
+            cuts, curr_sum = 0, 0
+            for x in nums:
+                curr_sum += x
+                if curr_sum > mid:
+                    cuts, curr_sum = cuts + 1, x
+            subs = cuts + 1
+            return subs <= m
+
+        while low <= high:
+            mid = (low + high) // 2
+            if is_valid(m, mid):  # can you make at-most m sub-arrays with maximum sum atmost mid
+                ans, high = mid, mid - 1
+            else:
+                low = mid + 1
+        return ans
 
 
 if __name__ == '__main__':
-    print(Solution().readBinaryWatch(1))
+    # print(Solution().splitArray([10, 5, 13, 4, 8, 4, 5, 11, 14, 9, 16, 10, 20, 8], 8))
+    print(Solution().splitArray([7,2,5,10,8], 2))
