@@ -23,10 +23,11 @@ class Solution:
             visit[i] = 1
             return True
 
-        for i in range(numCourses):
-            if not can_finish_one(i):
-                return False
-        return True
+        return all(can_finish_one(i) for i in range(numCourses))
+        # for i in range(numCourses):
+        #     if not can_finish_one(i):
+        #         return False
+        # return True
 
     # BFS, Kahn's algorithm
     def canFinish2(self, numCourses: int, prerequisites) -> bool:
@@ -39,15 +40,14 @@ class Solution:
         while start:
             n = start.pop()
             if n in graph:
-                for i in list(graph[n]):
-                    graph[n].remove(i)
-                    if not graph[n]:
-                        graph.pop(n)
+                for i in graph[n]:
                     in_degree[i] -= 1
                     if in_degree[i] == 0:
                         start.append(i)
+                graph.pop(n)
         return not graph
 
+    # Alternative of solution2
     def canFinish3(self, numCourses: int, prerequisites) -> bool:
         graph = {i: set() for i in range(numCourses)}
         graph_rev = {i: set() for i in range(numCourses)}

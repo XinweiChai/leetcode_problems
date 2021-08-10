@@ -66,18 +66,20 @@ def read_file(strs) -> dict:
 
 
 def has_cycle(graph):
-    to_visit = set(graph.keys())
-    while to_visit:
-        stack = [to_visit.pop()]
-        visited = set()
+    visited = set()
+    for i in graph:
+        if i in visited:
+            continue
+        stack = [i]
+        visited_in_round = {i}
         while stack:
             cur = stack.pop()
-            for i in graph[cur]:
-                if i in visited:
+            for j in graph[cur]:
+                if j in visited_in_round:
                     return True
-                visited.add(i)
-                stack.append(i)
-                to_visit.remove(i)
+                visited_in_round.add(j)
+                visited.add(j)
+                stack.append(j)
     return False
 
 

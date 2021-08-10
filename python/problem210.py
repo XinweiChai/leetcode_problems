@@ -35,18 +35,16 @@ class Solution:
             n = start.pop()
             s.append(n)
             if n in graph:
-                for i in list(graph[n]):
-                    graph[n].remove(i)
-                    if not graph[n]:
-                        graph.pop(n)
+                for i in graph[n]:
                     in_degree[i] -= 1
                     if in_degree[i] == 0:
                         start.append(i)
+                graph.pop(n)
         if graph:
             return []
         else:
             return s
 
-
-print(Solution().findOrder(4, [[1, 0], [2, 0], [3, 1], [3, 2]]))
-print(Solution().findOrder(4, [[1, 0], [0, 1], [3, 1], [3, 2]]))
+if __name__ == '__main__':
+    print(Solution().findOrder(4, [[1, 0], [2, 0], [3, 1], [3, 2]]))
+    print(Solution().findOrder(4, [[1, 0], [0, 1], [3, 1], [3, 2]]))

@@ -3,10 +3,9 @@ from collections import deque
 
 
 def level_order(root: TreeNode):
-    cur = deque()
-    cur.append(root)
-    while len(cur):
-        x = cur.pop()
+    cur = deque([root])
+    while cur:
+        x = cur.popleft()
         yield x.val
         if x.left:
             cur.append(x.left)
@@ -186,4 +185,4 @@ if __name__ == '__main__':
     # for i in post_order_iterative(tree):
     #     print(i)
     # morris_traversal(tree)
-    morris_traversal_post_order(tree)
+    # morris_traversal_post_order(tree)

@@ -1,4 +1,5 @@
 from collections import defaultdict, deque
+from functools import lru_cache
 
 
 class Graph:
@@ -73,10 +74,10 @@ class Graph:
         # if any neighbour is visited and in
         # recStack then graph is cyclic
         for neighbour in self.graph[v]:
-            if visited[neighbour] == False:
-                if self.isCyclicUtil(neighbour, visited, recStack) == True:
+            if not visited[neighbour]:
+                if self.isCyclicUtil(neighbour, visited, recStack):
                     return True
-            elif recStack[neighbour] == True:
+            elif recStack[neighbour]:
                 return True
 
         # The node needs to be poped from
@@ -89,8 +90,8 @@ class Graph:
         visited = [False] * (self.V + 1)
         recStack = [False] * (self.V + 1)
         for node in range(self.V):
-            if visited[node] == False:
-                if self.isCyclicUtil(node, visited, recStack) == True:
+            if not visited[node]:
+                if self.isCyclicUtil(node, visited, recStack):
                     return True
         return False
 
@@ -110,6 +111,71 @@ class Graph:
                     visited.add(j)
                     stack.append(j)
         return False
+
+
+# Problem207
+class Solution:
+    # DFS
+    def canFinish(self, numCourses: int, prerequisites) -> bool:
+        graph = [[] for _ in range(numCourses)]
+        visit = [0 for _ in range(numCourses)]
+        for x, y in prerequisites:
+            graph[x].append(y)
+
+        # 0 for unvisited, 1 for visited, -1 for visiting
+        @lru_cache
+        def can_finish_one(i):
+            if visit[i] == -1:
+                return False
+            if visit[i] == 1:
+                return True
+            visit[i] = -1
+            for j in graph[i]:
+                if not can_finish_one(j):
+                    return False
+            visit[i] = 1
+            return True
+
+        return all(can_finish_one(i) for i in range(numCourses))
+        # for i in range(numCourses):
+        #     if not can_finish_one(i):
+        #         return False
+        # return True
+
+    # BFS, Kahn's algorithm
+    def canFinish2(self, numCourses: int, prerequisites) -> bool:
+        graph = {}
+        in_degree = [0] * numCourses
+        for i in prerequisites:
+            graph[i[0]] = graph.get(i[0], set()) | {i[1]}
+            in_degree[i[1]] += 1
+        start = [i for i in range(len(in_degree)) if in_degree[i] == 0]
+        while start:
+            n = start.pop()
+            if n in graph:
+                for i in graph[n]:
+                    in_degree[i] -= 1
+                    if in_degree[i] == 0:
+                        start.append(i)
+                graph.pop(n)
+        return not graph
+
+    # Alternative of solution2
+    def canFinish3(self, numCourses: int, prerequisites) -> bool:
+        graph = {i: set() for i in range(numCourses)}
+        graph_rev = {i: set() for i in range(numCourses)}
+        for i in prerequisites:
+            graph[i[0]].add(i[1])
+            graph_rev[i[1]].add(i[0])
+        S = [i for i in graph_rev if not graph_rev[i]]
+        while S:
+            node = S.pop()
+            for m in graph[node]:
+                graph_rev[m].remove(node)
+                if not graph_rev[m]:
+                    S.append(m)
+            graph.pop(node)
+        return not graph
 
 
 g = Graph()
