@@ -1,3 +1,4 @@
+import bisect
 from typing import List
 
 
@@ -59,5 +60,12 @@ class Solution:
 
         return [left_idx, extreme_insertion_index(nums, target, False) - 1]
 
+    # Built-in functions
+    def searchRange2(self, nums: List[int], target: int) -> List[int]:
+        if target not in nums:
+            return [-1, -1]
+        return [bisect.bisect_left(nums, target), bisect.bisect(nums, target) - 1]
 
-print(Solution().searchRange([5, 7, 7, 8, 8, 8], 8))
+
+if __name__ == '__main__':
+    print(Solution().searchRange([5, 7, 7, 8, 8, 8], 8))
