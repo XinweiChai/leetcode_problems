@@ -102,14 +102,14 @@ class LFUCache:
 
         All of the above opeartions took O(1) time.
         """
-        freq = node.freq
+        freq = node.key_freq
 
         self._freq[freq].pop(node)
         if self._minfreq == freq and not self._freq[freq]:
             self._minfreq += 1
 
-        node.freq += 1
-        freq = node.freq
+        node.key_freq += 1
+        freq = node.key_freq
         self._freq[freq].append(node)
 
     def get(self, key):

@@ -19,7 +19,7 @@ class WordDictionary:
             if pos == len(word):
                 return '#' in cur
             if word[pos] == '.':
-                return any([rec(pos + 1, cur[i]) for i in cur.keys()])
+                return any([rec(pos + 1, cur[i]) for i in cur.freq_key()])
             else:
                 return word[pos] in cur and rec(pos + 1, cur[word[pos]])
 

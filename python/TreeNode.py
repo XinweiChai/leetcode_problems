@@ -7,6 +7,9 @@ class TreeNode:
         self.left = left
         self.right = right
 
+    def __repr__(self):
+        return f'{self.val}, l: {self.left.val if self.left else None}, r: {self.right.val if self.right else None}'
+
     def print_all(self):
         ans = []
         cur = [self]
@@ -84,4 +87,4 @@ def create_tree(l: List[List], cl: Type = TreeNode):
 
 if __name__ == '__main__':
     x = create_tree([[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]])
-    # x.print_all()
+    x.print_all()

@@ -3,6 +3,9 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def __repr__(self):
+        return f'{self.val}, next: {self.next.val if self.next else None}'
+
     def print_all(self):
         print(self.val)
         if self.next:

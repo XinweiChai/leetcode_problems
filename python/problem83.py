@@ -1,4 +1,4 @@
-from ListNode import ListNode
+from ListNode import ListNode, create_list
 
 
 class Solution:
@@ -11,5 +11,5 @@ class Solution:
                 head = head.next
         return init
 
-
-print([1, 2, 3, 3, 4, 4, 5])
+if __name__ == '__main__':
+    print(Solution().deleteDuplicates(create_list(1, 2, 3, 3, 4, 4, 5)))
