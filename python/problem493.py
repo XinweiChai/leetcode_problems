@@ -1,4 +1,5 @@
 from typing import List
+from bisect import bisect
 
 
 # Similar to problem315
@@ -58,24 +59,36 @@ class Solution:
 
     # Merge sort
     def reversePairs2(self, nums: List[int]) -> int:
-        def sort(arr):
-            half = len(arr) // 2
-            cnt = cnt1 = cnt2 = 0
-            if half:
-                left, cnt1 = sort(arr[:half])
-                right, cnt2 = sort(arr[half:])
-                for i in range(len(arr) - 1, -1, -1):
-                    if not right or (left and left[-1][1] > right[-1][1]):
-                        if right and left[-1][1] > 2 * right[-1][1]:
-                            cnt += len(right)
-                        arr[i] = left.pop()
-                    else:
-                        arr[i] = right.pop()
-            return arr, cnt + cnt1 + cnt2
+        def mergeSort(nums):
+            if len(nums) <= 1:
+                return nums, 0
+            m = len(nums) // 2
+            left, countl = mergeSort(nums[:m])
+            right, countr = mergeSort(nums[m:])
+            count = countl + countr
+            for r in right:
+                diff = len(left) - bisect(left, r * 2)
+                if diff <= 0:
+                    break
+                count += diff
+            return sorted(left + right), count
 
-        _, cnt = sort(list(enumerate(nums)))
-        return cnt
+        return mergeSort(nums)[1]
+
+    # Using insert trick
+    def reversePairs3(self, nums: List[int]) -> int:
+        left = []
+        ans = 0
+        for i, n in enumerate(nums):
+            j = bisect(left, 2 * n)
+            ans += i - j
+            k = bisect(left, n)
+            # insert trick
+            # left[k:k] = [n]
+            left.insert(k, n)
+        return ans
+
 
 if __name__ == '__main__':
-    print(Solution().reversePairs2(nums=[1, 3, 2, 3, 1]))
-    print(Solution().reversePairs2(nums=[2, 4, 3, 5, 1]))
+    print(Solution().reversePairs3(nums=[1, 3, 2, 3, 1]))
+    print(Solution().reversePairs3(nums=[2, 4, 3, 5, 1]))
