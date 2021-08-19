@@ -1,4 +1,5 @@
-from typing import List, Type
+from typing import List, Type, Any
+from collections import deque
 
 
 class TreeNode:
@@ -8,7 +9,7 @@ class TreeNode:
         self.right = right
 
     def __repr__(self):
-        return f'{self.val}, l: {self.left.val if self.left else None}, r: {self.right.val if self.right else None}'
+        return f'val: {self.val}, l_val: {self.left.val if self.left else None}, r_val: {self.right.val if self.right else None}'
 
     def print_all(self):
         ans = []
@@ -57,34 +58,45 @@ class TreeNode:
         return temp
 
 
-def create_tree(l: List[List], cl: Type = TreeNode):
+def create_tree(l: List[Any], cl: Type = TreeNode):
     assert issubclass(cl, TreeNode)
-    root = cl(l[0][0])
-    cur = [root]
-    for i in l[1:]:
-        cnt = 0
-        temp = []
-        for j in cur:
-            if j is None:
-                cnt += 2
-                temp.append(None)
-                temp.append(None)
-                continue
-            if i[cnt] is not None:
-                j.left = cl(i[cnt])
-            temp.append(j.left)
-            cnt += 1
-            if i[cnt]:
-                j.right = cl(i[cnt])
-            temp.append(j.right)
-            cnt += 1
-        cur = temp
-    return root
-
-
-
+    if isinstance(l[0], list):
+        root = cl(l[0][0])
+        cur = [root]
+        for i in l[1:]:
+            cnt = 0
+            temp = []
+            for j in cur:
+                if j is None:
+                    cnt += 2
+                    temp.append(None)
+                    temp.append(None)
+                    continue
+                if i[cnt] is not None:
+                    j.left = cl(i[cnt])
+                temp.append(j.left)
+                cnt += 1
+                if i[cnt]:
+                    j.right = cl(i[cnt])
+                temp.append(j.right)
+                cnt += 1
+            cur = temp
+        return root
+    else:
+        root = TreeNode(l[0])
+        q = deque([root])
+        for i in range(1, len(l), 2):
+            cur = q.popleft()
+            if l[i] is not None:
+                cur.left = TreeNode(l[i])
+                q.append(cur.left)
+            if l[i + 1] is not None:
+                cur.right = TreeNode(l[i + 1])
+                q.append(cur.right)
+        return root
 
 
 if __name__ == '__main__':
-    x = create_tree([[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]])
+    # x = create_tree([[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]])
+    x = create_tree([1, 2, 3, 4, None, 6, 7, 8, 9, 12, 13, 14, 15])
     x.print_all()
