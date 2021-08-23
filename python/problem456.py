@@ -16,6 +16,20 @@ class Solution:
             stack.append(n)
         return False
 
+    # Using O(1) space, make use of the original list as a stack
+    def find132pattern2(self, nums: List[int]) -> bool:
+        n = top = len(nums)
+        third = float('-inf')
+        for i in range(n - 1, -1, -1):
+            if nums[i] < third:
+                return True
+            while top < n and nums[i] > nums[top]:
+                third = nums[top]
+                top += 1
+            top -= 1
+            nums[top] = nums[i]
+        return False
+
 
 if __name__ == '__main__':
-    print(Solution().find132pattern([1, 3, 2, 4, 5, 6, 7, 8, 9, 10]))
+    print(Solution().find132pattern2([1, 3, 2, 4, 5, 6, 7, 8, 9, 10, 1]))
