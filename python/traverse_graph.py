@@ -80,7 +80,7 @@ class Graph:
             elif recStack[neighbour]:
                 return True
 
-        # The node needs to be poped from
+        # The node needs to be popped from
         # recursion stack before function ends
         recStack[v] = False
         return False
