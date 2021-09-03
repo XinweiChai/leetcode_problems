@@ -28,12 +28,12 @@ class Solution:
                 return [None]
             res = []
             if (l, r) in memo:
-                return memo[(l, r)]
+                return memo[l, r]
             for i in range(l, r):
                 for j in fill_tree(l, i):
                     for k in fill_tree(i + 1, r):
                         res.append(TreeNode(cand[i], j, k))
-            memo[(l, r)] = res
+            memo[l, r] = res
             return res
 
         return fill_tree(0, len(cand))

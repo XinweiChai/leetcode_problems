@@ -26,7 +26,7 @@ class Solution:
 
     def trial(self,p,nums, s):
         if (p, s) in self.memo:
-            return self.memo[(p, s)]
+            return self.memo[p, s]
         if p == len(nums):
             if s == 0:
                 return 1
@@ -35,8 +35,8 @@ class Solution:
         else:
             pos = self.trial(p + 1, nums,s + nums[p])
             neg = self.trial(p + 1, nums,s - nums[p])
-            self.memo[(p, s)] = pos + neg
-            return self.memo[(p, s)]
+            self.memo[p, s] = pos + neg
+            return self.memo[p, s]
 
 
 

@@ -15,15 +15,15 @@ class Solution:
         def dfs(pos, split):
             if (pos, split) not in memo:
                 if split == 0:
-                    # memo[(pos, split)] = sum(nums[pos:])
-                    memo[(pos, split)] = cumul_sum[n] - cumul_sum[pos]
+                    # memo[pos, split] = sum(nums[pos:])
+                    memo[pos, split] = cumul_sum[n] - cumul_sum[pos]
                 elif split == n - pos:
-                    # memo[(pos, split)] = max(nums[pos:])
-                    memo[(pos, split)] = cumul_max[pos]
+                    # memo[pos, split] = max(nums[pos:])
+                    memo[pos, split] = cumul_max[pos]
                 else:
-                    # memo[(pos, split)] = min(max(sum(nums[pos:i]), dfs(i, split - 1)) for i in range(pos + 1, n - split + 1))
-                    memo[(pos, split)] = min(max(cumul_sum[i] - cumul_sum[pos], dfs(i, split - 1)) for i in range(pos + 1, n - split + 1))
-            return memo[(pos, split)]
+                    # memo[pos, split] = min(max(sum(nums[pos:i]), dfs(i, split - 1)) for i in range(pos + 1, n - split + 1))
+                    memo[pos, split] = min(max(cumul_sum[i] - cumul_sum[pos], dfs(i, split - 1)) for i in range(pos + 1, n - split + 1))
+            return memo[pos, split]
 
         return dfs(0, m - 1)
 

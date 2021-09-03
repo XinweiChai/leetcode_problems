@@ -13,10 +13,10 @@ class Solution:
             if left > right:
                 return 0
             if (left, right) not in memo:
-                memo[(left, right)] = max(dp(left, i - 1) + dp(i + 1, right) +
+                memo[left, right] = max(dp(left, i - 1) + dp(i + 1, right) +
                                           nums[left - 1] * nums[i] * nums[right + 1]
                                           for i in range(left, right + 1))
-            return memo[(left, right)]
+            return memo[left, right]
 
         return dp(1, n - 2)
 

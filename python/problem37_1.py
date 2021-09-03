@@ -10,7 +10,7 @@ class Solution:
                 if board[r][c] != ".":
                     rows[r].add(board[r][c])
                     cols[c].add(board[r][c])
-                    triples[(r // 3, c // 3)].add(board[r][c])
+                    triples[r // 3, c // 3].add(board[r][c])
                 else:
                     visit.append((r, c))
 

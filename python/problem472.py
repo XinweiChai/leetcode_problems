@@ -12,11 +12,11 @@ class Solution:
                     return concat
                 for j in range(len(w) + concat - 1, 0, -1):
                     if w[:j] in words and find(w[j:], True):
-                        memo[(w, concat)] = True
+                        memo[w, concat] = True
                         return True
-                memo[(w, concat)] = False
+                memo[w, concat] = False
                 return False
-            return memo[(w, concat)]
+            return memo[w, concat]
         res = [i for i in words if find(i, False)]
 
         return res

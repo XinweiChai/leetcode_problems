@@ -13,14 +13,14 @@ class Solution:
 
         def dfs(i, j):
             if (i, j) in table:
-                return table[(i, j)]
+                return table[i, j]
             res = 1
             for k in neighbors:
                 row = i + k[0]
                 col = j + k[1]
                 if 0 <= row < r and 0 <= col < c and matrix[row][col] > matrix[i][j]:
                     res = max(res, dfs(row, col) + 1)
-            table[(i, j)] = res
+            table[i, j] = res
             return res
 
         max_path = 0

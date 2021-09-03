@@ -12,15 +12,15 @@ class Solution:
         def dfs(start, end):
             if (start, end) not in memo:
                 if expression[start:end].isdigit():
-                    memo[(start, end)] = [int(expression[start:end])]
+                    memo[start, end] = [int(expression[start:end])]
                 else:
-                    memo[(start, end)] = []
+                    memo[start, end] = []
                     for i in range(start, end):
                         if expression[i] in '+-*':
                             left = dfs(start, i)
                             right = dfs(i + 1, end)
-                            memo[(start, end)].extend(compute(x, y, expression[i]) for x in left for y in right)
-            return memo[(start, end)]
+                            memo[start, end].extend(compute(x, y, expression[i]) for x in left for y in right)
+            return memo[start, end]
 
         return dfs(0, len(expression))
 

@@ -13,9 +13,9 @@ class Solution:
             if p == len(strs):
                 return 0
             if (p, zeros, ones) not in memo:
-                memo[(p, zeros, ones)] = max(dp(p + 1, zeros - strs[p][0], ones - strs[p][1]) + 1,
+                memo[p, zeros, ones] = max(dp(p + 1, zeros - strs[p][0], ones - strs[p][1]) + 1,
                                              dp(p + 1, zeros, ones))
-            return memo[(p, zeros, ones)]
+            return memo[p, zeros, ones]
 
         return dp(0, m, n)
 
