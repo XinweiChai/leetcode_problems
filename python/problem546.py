@@ -4,36 +4,8 @@ from typing import List
 
 
 class Solution:
+    # With no aggregation
     def removeBoxes(self, boxes: List[int]) -> int:
-        counter = [[boxes[0], 1]]
-        for i in range(1, len(boxes)):
-            if boxes[i] == boxes[i - 1]:
-                counter[-1][1] += 1
-            else:
-                counter.append([boxes[i], 1])
-        n = len(counter)
-
-        @lru_cache(maxsize=None)
-        def dp(lo, hi):
-            if lo > hi:
-                return 0
-            if lo == hi:
-                return counter[lo][1] ** 2
-            cnt = counter[hi][1]
-            temp = 0
-            last = hi
-            max_val = dp(lo, hi - 1) + cnt ** 2
-            for i in range(hi - 1, lo - 1, -1):
-                if counter[i][0] == counter[hi][0]:
-                    cnt += counter[i][1]
-                    temp += dp(i + 1, last - 1)
-                    last = i
-                    max_val = max(max_val, temp + cnt ** 2 + dp(lo, i - 1))
-            return max_val
-
-        return dp(0, n - 1)
-
-    def removeBoxes2(self, boxes: List[int]) -> int:
         @lru_cache(None)
         def dfs(i, j, k):
             if i > j: return 0
@@ -49,7 +21,8 @@ class Solution:
 
         return dfs(0, len(boxes) - 1, 0)
 
-    def removeBoxes3(self, boxes: List[int]) -> int:
+    # Better than memorizing the indexes as there are possibly repeated patterns
+    def removeBoxes2(self, boxes: List[int]) -> int:
         @lru_cache(None)
         def bestScore(boxes, similarCnt):
             color = boxes[0][0]
@@ -78,4 +51,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().removeBoxes3([1, 2, 2, 2, 1, 2, 1]))
+    print(Solution().removeBoxes2([5, 3, 10, 5, 3, 3, 3, 5, 10]))
