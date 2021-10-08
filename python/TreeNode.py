@@ -90,7 +90,7 @@ def create_tree(l: List[Any], cl: Type = TreeNode):
             if l[i] is not None:
                 cur.left = TreeNode(l[i])
                 q.append(cur.left)
-            if l[i + 1] is not None:
+            if i+1 < len(l) and l[i + 1] is not None:
                 cur.right = TreeNode(l[i + 1])
                 q.append(cur.right)
         return root
