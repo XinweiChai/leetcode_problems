@@ -1,9 +1,9 @@
 from functools import lru_cache
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def PredictTheWinner(self, nums: List[int]) -> bool:
+    def PredictTheWinner(self, nums: Sequence[int]) -> bool:
         @lru_cache
         def p1(left, right):
             if left == right:
@@ -19,7 +19,7 @@ class Solution:
         res = p1(0, len(nums) - 1)
         return res * 2 >= sum(nums)
 
-    def PredictTheWinner2(self, nums: List[int]) -> bool:
+    def PredictTheWinner2(self, nums: Sequence[int]) -> bool:
         dp = [[0] * len(nums) for _ in range(len(nums))]
         for s in range(len(nums) - 1, -1, -1):
             for e in range(s, len(nums)):
@@ -29,7 +29,7 @@ class Solution:
                     dp[s][e] = max(nums[e] - dp[s][e - 1], nums[s] - dp[s + 1][e])
         return dp[0][-1] >= 0
 
-    def PredictTheWinner3(self, nums: List[int]) -> bool:
+    def PredictTheWinner3(self, nums: Sequence[int]) -> bool:
         dp = [0] * len(nums)
         for s in range(len(nums) - 1, -1, -1):
             for e in range(s, len(nums)):

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def generate(self, numRows: int) -> List[List[int]]:
+    def generate(self, numRows: int) -> Sequence[Sequence[int]]:
         ans = [[1], [1, 1]]
         for i in range(2, numRows):
             temp = [1] * (i + 1)

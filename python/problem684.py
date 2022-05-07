@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
+    def findRedundantConnection(self, edges: Sequence[Sequence[int]]) -> Sequence[int]:
         ds = DisjointSet(len(edges))
         for i in edges:
             if not ds.join(i[0], i[1]):

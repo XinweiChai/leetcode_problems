@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from heapq import heappush, heappop
 
 
 class Solution:
-    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
+    def kthSmallest(self, matrix: Sequence[Sequence[int]], k: int) -> int:
         # O(log(m*n))
         # return sorted([matrix[i][j] for i in range(len(matrix)) for j in range(len(matrix[0]))])[k - 1]
 

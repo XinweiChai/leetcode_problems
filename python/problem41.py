@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
+    def firstMissingPositive(self, nums: Sequence[int]) -> int:
         # O(nlogn)
         # nums.sort()
         # num = 1

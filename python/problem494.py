@@ -1,11 +1,11 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     def __init__(self):
         self.memo = {}
 
-    def findTargetSumWays(self, nums: List[int], S: int) -> int:
+    def findTargetSumWays(self, nums: Sequence[int], S: int) -> int:
         # O(2^n)
         # cnt = 0
         #

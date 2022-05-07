@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def minPathSum(self, grid: List[List[int]]) -> int:
+    def minPathSum(self, grid: Sequence[Sequence[int]]) -> int:
         r = len(grid)
         c = len(grid[0])
         for i in range(1, r):

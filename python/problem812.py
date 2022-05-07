@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def largestTriangleArea(self, points: List[List[int]]) -> float:
+    def largestTriangleArea(self, points: Sequence[Sequence[int]]) -> float:
         area = 0
         for i in range(len(points) - 2):
             x1, y1 = points[i]

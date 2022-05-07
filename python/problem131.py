@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def partition(self, s: str) -> List[List[str]]:
+    def partition(self, s: str) -> Sequence[Sequence[str]]:
         table = [[False] * (len(s)) for _ in range(len(s))]
         for i in range(len(s)):
             table[i][i] = True

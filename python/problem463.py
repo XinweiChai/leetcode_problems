@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import operator
 
 
 class Solution:
-    def islandPerimeter(self, grid: List[List[int]]) -> int:
+    def islandPerimeter(self, grid: Sequence[Sequence[int]]) -> int:
         cnt = 0
         r = len(grid)
         c = len(grid[0])
@@ -18,7 +18,7 @@ class Solution:
         return cnt
 
     # WTF
-    def islandPerimeter2(self, grid: List[List[int]]) -> int:
+    def islandPerimeter2(self, grid: Sequence[Sequence[int]]) -> int:
         return sum(sum(map(operator.ne, [0] + row, row + [0]))
                    for row in grid + list(map(list, zip(*grid))))
 

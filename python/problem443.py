@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def compress(self, chars: List[str]) -> int:
+    def compress(self, chars: Sequence[str]) -> int:
         cur_cnt = 1
         cur_char = chars[0]
         right = 1

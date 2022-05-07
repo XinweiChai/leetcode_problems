@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from collections import deque
 
 
 class Solution:
-    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
+    def pacificAtlantic(self, heights: Sequence[Sequence[int]]) -> Sequence[Sequence[int]]:
         r = len(heights)
         c = len(heights[0])
         pac = [[False] * c for _ in range(r)]

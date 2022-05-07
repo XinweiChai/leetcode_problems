@@ -1,4 +1,4 @@
-from typing import List
+from typing import Sequence
 from ListNode import ListNode, create_list
 from queue import PriorityQueue
 import heapq
@@ -19,7 +19,7 @@ class Solution:
     #     head.next = l1 or l2
     #     return sentinel.next
 
-    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+    def mergeKLists(self, lists: Sequence[ListNode]) -> ListNode:
         # Stupid solution: merge one by one
         # cur = lists[0]
         # for i in range(1, len(lists)):

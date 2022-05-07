@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def solve(self, board: List[List[str]]):
+    def solve(self, board: Sequence[Sequence[str]]):
         """
         Do not return anything, modify board in-place instead.
         """

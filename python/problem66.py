@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def plusOne(self, digits: List[int]) -> List[int]:
+    def plusOne(self, digits: Sequence[int]) -> Sequence[int]:
         digits[-1] += 1
         cur = len(digits) - 1
         while digits[cur] == 10 and cur > 0:

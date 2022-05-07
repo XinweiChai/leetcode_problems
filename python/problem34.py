@@ -1,9 +1,9 @@
 import bisect
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
+    def searchRange(self, nums: Sequence[int], target: int) -> Sequence[int]:
         # Find mid then search extreme
         # if not nums or target < nums[0] or target > nums[-1]:
         #     return [-1, -1]
@@ -61,7 +61,7 @@ class Solution:
         return [left_idx, extreme_insertion_index(nums, target, False) - 1]
 
     # Built-in functions
-    def searchRange2(self, nums: List[int], target: int) -> List[int]:
+    def searchRange2(self, nums: Sequence[int], target: int) -> Sequence[int]:
         if target not in nums:
             return [-1, -1]
         return [bisect.bisect_left(nums, target), bisect.bisect(nums, target) - 1]

@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     # Using backtrack
-    def makesquare(self, M: List[int]) -> bool:
+    def makesquare(self, M: Sequence[int]) -> bool:
         M.sort(reverse=True)
         n, side = len(M), sum(M) // 4
         if sum(M) % 4 != 0 or M[0] > side:

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+    def smallerNumbersThanCurrent(self, nums: Sequence[int]) -> Sequence[int]:
         # n = len(nums)
         # res = [0] * n
         # nums = sorted(enumerate(nums), key=lambda x: x[1])

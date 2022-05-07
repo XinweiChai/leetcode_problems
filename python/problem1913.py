@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxProductDifference(self, nums: List[int]) -> int:
+    def maxProductDifference(self, nums: Sequence[int]) -> int:
         max1 = float('-inf')
         max2 = float('-inf')
         min1 = float('inf')

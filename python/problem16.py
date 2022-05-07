@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def threeSumClosest(self, nums: List[int], target: int) -> int:
+    def threeSumClosest(self, nums: Sequence[int], target: int) -> int:
         diff = float('inf')
         nums.sort()
         for i in range(len(nums) - 2):

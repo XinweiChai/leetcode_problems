@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+    def permute(self, nums: Sequence[int]) -> Sequence[Sequence[int]]:
         # Loop
         # res = [[nums[0]]]
         # count = 1

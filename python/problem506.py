@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findRelativeRanks(self, score: List[int]) -> List[str]:
+    def findRelativeRanks(self, score: Sequence[int]) -> Sequence[str]:
         # rank = [i[0] for i in sorted(enumerate(score), key=lambda x: -x[1])]
         # special = {0: "Gold Medal", 1: "Silver Medal", 2: "Bronze Medal"}
         # for i in range(min(3, len(rank))):

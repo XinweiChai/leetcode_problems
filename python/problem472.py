@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
+    def findAllConcatenatedWordsInADict(self, words: Sequence[str]) -> Sequence[str]:
         words = set(words)
         memo = {}
 

@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from collections import Counter
 
 
 class Solution:
-    def leastInterval(self, tasks: List[str], n: int) -> int:
+    def leastInterval(self, tasks: Sequence[str], n: int) -> int:
         tasks_count = list(Counter(tasks).values())
         max_count = max(tasks_count)
         max_count_tasks = tasks_count.count(max_count)

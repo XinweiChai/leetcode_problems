@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def circularArrayLoop(self, nums: List[int]) -> bool:
+    def circularArrayLoop(self, nums: Sequence[int]) -> bool:
         n = len(nums)
         for i in range(n):
             if nums[i] > 0:
@@ -40,7 +40,7 @@ class Solution:
         return False
 
     # A more tricky way of marking
-    def circularArrayLoop2(self, nums: List[int]) -> bool:
+    def circularArrayLoop2(self, nums: Sequence[int]) -> bool:
         for i, num in enumerate(nums):
             mark = str(i)
             while type(nums[i]) == int and (num * nums[i]) > 0 and nums[i] % len(nums) != 0:

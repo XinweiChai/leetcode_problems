@@ -1,10 +1,10 @@
-from typing import List
+from typing import Sequence
 
 
 # Using Segment Tree
 class NumArray:
 
-    def __init__(self, nums: List[int]):
+    def __init__(self, nums: Sequence[int]):
         self.n = len(nums)
         self.tree = [0] * (self.n << 1)
         for i in range(self.n):
@@ -47,7 +47,7 @@ class NumArray:
 
 # Using Fenwick Tree (Binary Indexed Tree)
 class NumArray2:
-    def __init__(self, nums: List[int]):
+    def __init__(self, nums: Sequence[int]):
         self.nums = nums
         self.N = len(self.nums)
         self.tree = [0] * (self.N + 1)

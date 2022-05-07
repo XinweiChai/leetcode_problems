@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findErrorNums(self, nums: List[int]) -> List[int]:
+    def findErrorNums(self, nums: Sequence[int]) -> Sequence[int]:
         diff = 0
         square_diff = 0
         for idx, i in enumerate(nums):
@@ -11,7 +11,7 @@ class Solution:
         sum = square_diff // diff
         return [(sum - diff) // 2, (sum + diff) // 2]
 
-    def findErrorNums2(self, nums: List[int]) -> List[int]:
+    def findErrorNums2(self, nums: Sequence[int]) -> Sequence[int]:
         dup = -1
         missing = 1
         for n in nums:
@@ -24,7 +24,7 @@ class Solution:
                 missing = i + 1
         return [dup, missing]
 
-    def findErrorNums3(self, nums: List[int]) -> List[int]:
+    def findErrorNums3(self, nums: Sequence[int]) -> Sequence[int]:
         xor = xor0 = xor1 = 0
         for n in nums:
             xor ^= n

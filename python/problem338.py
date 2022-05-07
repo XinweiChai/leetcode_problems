@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def countBits(self, num: int) -> List[int]:
+    def countBits(self, num: int) -> Sequence[int]:
         # c = [0] * (num + 1)
         # exp = 1
         # for i in range(1, num + 1):

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def longestConsecutive(self, nums: List[int]) -> int:
+    def longestConsecutive(self, nums: Sequence[int]) -> int:
         # # Sort O(nlogn)
         # if not nums:
         #     return 0

@@ -1,9 +1,9 @@
 from itertools import combinations
-from typing import List, Iterable
+from typing import Sequence, Iterable
 
 
 class Solution:
-    def combinationSum3(self, k: int, n: int) -> List[Iterable[int]]:
+    def combinationSum3(self, k: int, n: int) -> Sequence[Iterable[int]]:
         # Using built-in functions
         # return [c for c in combinations(range(1, 10), k) if sum(c) == n]
 

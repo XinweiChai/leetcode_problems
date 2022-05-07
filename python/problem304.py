@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 
 
 class NumMatrix:
 
-    def __init__(self, matrix: List[List[int]]):
+    def __init__(self, matrix: Sequence[Sequence[int]]):
         r = len(matrix)
         c = len(matrix[0])
         self.sum_mat = [[0] * (c + 1) for _ in range(r + 1)]

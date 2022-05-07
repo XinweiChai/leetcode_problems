@@ -1,11 +1,11 @@
 from functools import lru_cache
 from itertools import groupby
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     # With no aggregation
-    def removeBoxes(self, boxes: List[int]) -> int:
+    def removeBoxes(self, boxes: Sequence[int]) -> int:
         @lru_cache(None)
         def dfs(i, j, k):
             if i > j: return 0
@@ -22,7 +22,7 @@ class Solution:
         return dfs(0, len(boxes) - 1, 0)
 
     # Better than memorizing the indexes as there are possibly repeated patterns
-    def removeBoxes2(self, boxes: List[int]) -> int:
+    def removeBoxes2(self, boxes: Sequence[int]) -> int:
         @lru_cache(None)
         def bestScore(boxes, similarCnt):
             color = boxes[0][0]

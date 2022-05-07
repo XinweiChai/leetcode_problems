@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findMedianSortedArrays(self, A: List[int], B: List[int]) -> float:
+    def findMedianSortedArrays(self, A: Sequence[int], B: Sequence[int]) -> float:
         m, n = len(A), len(B)
         if m > n:
             A, B, m, n = B, A, n, m

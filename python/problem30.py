@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findSubstring(self, s: str, words: List[str]) -> List[int]:
+    def findSubstring(self, s: str, words: Sequence[str]) -> Sequence[int]:
         # Iterate over all the substrings
         # length = len(words[0])
         # words_length = length * len(words)

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def jump(self, nums: List[int]) -> int:
+    def jump(self, nums: Sequence[int]) -> int:
         # if len(nums) == 1:
         #     return 0
         # times = [pow(10, 5) + 1] * len(nums)

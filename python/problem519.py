@@ -1,4 +1,4 @@
-from typing import List
+from typing import Sequence
 import random
 
 
@@ -13,7 +13,7 @@ class Solution:
     # In each flip, the random choice is linked with the last cell,
     # which will be never chosen afterwards,
     # in case we step on duplicate, use its linked cell and update the link with current last one.
-    def flip(self) -> List[int]:
+    def flip(self) -> Sequence[int]:
         self.tot -= 1
         r = random.randint(0, self.tot)
         x = self.map.get(r, r)

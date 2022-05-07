@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 
 
 # class Solution:
-#     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-#         def kSum(nums: List[int], target: int, k: int) -> List[List[int]]:
+#     def fourSum(self, nums: Sequence[int], target: int) -> Sequence[Sequence[int]]:
+#         def kSum(nums: Sequence[int], target: int, k: int) -> Sequence[Sequence[int]]:
 #             res = []
 #             if len(nums) < k or nums[0] * k > target or target > nums[-1] * k:
 #                 return res
@@ -15,7 +15,7 @@ from typing import List
 #                         res.append(j + [nums[i]])
 #             return res
 #
-#         def twoSum(nums: List[int], target: int) -> List[List[int]]:
+#         def twoSum(nums: Sequence[int], target: int) -> Sequence[Sequence[int]]:
 #             res = []
 #             lo, hi = 0, len(nums) - 1
 #             while lo < hi:
@@ -34,8 +34,8 @@ from typing import List
 #         return kSum(nums, target, 4)
 
 class Solution:
-    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-        def kSum(nums: List[int], target: int, k: int) -> List[List[int]]:
+    def fourSum(self, nums: Sequence[int], target: int) -> Sequence[Sequence[int]]:
+        def kSum(nums: Sequence[int], target: int, k: int) -> Sequence[Sequence[int]]:
             if len(nums) == 0 or nums[0] * k > target or target > nums[-1] * k:
                 return []
             if k == 2:
@@ -47,7 +47,7 @@ class Solution:
                         res.append([nums[i]] + set)
             return res
 
-        def twoSum(nums: List[int], target: int) -> List[List[int]]:
+        def twoSum(nums: Sequence[int], target: int) -> Sequence[Sequence[int]]:
             res = []
             s = set()
             for i in range(len(nums)):

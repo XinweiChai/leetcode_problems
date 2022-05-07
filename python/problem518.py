@@ -1,9 +1,9 @@
 from functools import lru_cache
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def change(self, amount: int, coins: List[int]) -> int:
+    def change(self, amount: int, coins: Sequence[int]) -> int:
         n = len(coins)
         coins.sort()
 
@@ -20,7 +20,7 @@ class Solution:
         return helper(amount, n - 1)
 
     # Clever solution
-    def change2(self, amount: int, coins: List[int]) -> int:
+    def change2(self, amount: int, coins: Sequence[int]) -> int:
         dp = [1] + [0] * amount
         for coin in coins:
             for i in range(amount - coin + 1):

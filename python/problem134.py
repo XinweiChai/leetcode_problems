@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+    def canCompleteCircuit(self, gas: Sequence[int], cost: Sequence[int]) -> int:
         # Stupid traversal
         # l = len(gas)
         # for i in range(l):

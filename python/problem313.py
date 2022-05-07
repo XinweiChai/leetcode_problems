@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import heapq
 
 
 class Solution:
-    def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:
+    def nthSuperUglyNumber(self, n: int, primes: Sequence[int]) -> int:
         fac_primes = [0] * len(primes)
         k = [0] * n
         k[0] = 1
@@ -14,7 +14,7 @@ class Solution:
                     fac_primes[j] += 1
         return k[n - 1]
 
-    def nthSuperUglyNumber2(self, n: int, primes: List[int]) -> int:
+    def nthSuperUglyNumber2(self, n: int, primes: Sequence[int]) -> int:
         uglies = [1]
 
         def gen(prime):

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
+    def search(self, nums: Sequence[int], target: int) -> int:
         def rec_search(left, right):
             if left == right:
                 return left if nums[left] == target else -1

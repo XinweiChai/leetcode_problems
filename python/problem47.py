@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+    def permuteUnique(self, nums: Sequence[int]) -> Sequence[Sequence[int]]:
         freq = {}
         for i in nums:
             if i in freq:

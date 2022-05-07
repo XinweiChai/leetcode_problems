@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findRadius(self, houses: List[int], heaters: List[int]) -> int:
+    def findRadius(self, houses: Sequence[int], heaters: Sequence[int]) -> int:
         houses.sort()
         heaters.sort()
         if houses[-1] <= heaters[0]:

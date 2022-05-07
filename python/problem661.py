@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def imageSmoother(self, img: List[List[int]]) -> List[List[int]]:
+    def imageSmoother(self, img: Sequence[Sequence[int]]) -> Sequence[Sequence[int]]:
         r = len(img)
         c = len(img[0])
 

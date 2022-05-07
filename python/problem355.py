@@ -4,7 +4,7 @@ import heapq
 
 
 # My solution
-from typing import List
+from typing import Sequence
 
 
 class Twitter:
@@ -27,7 +27,7 @@ class Twitter:
             heapq.heappush(self.currentMessages[i], (self.time, userId, tweetId))
         self.time -= 1
 
-    def getNewsFeed(self, userId: int) -> List[int]:
+    def getNewsFeed(self, userId: int) -> Sequence[int]:
         """
         Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.
         """

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates: Sequence[int], target: int) -> Sequence[Sequence[int]]:
         # count = {}
         # used = {}
         # for i in candidates:

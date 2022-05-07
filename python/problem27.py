@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
+    def removeElement(self, nums: Sequence[int], val: int) -> int:
         r = len(nums) - 1
         for i in range(len(nums) - 1, -1, -1):
             if nums[i] == val:

@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import bisect
 
 
 class Solution:
-    def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
+    def findRightInterval(self, intervals: Sequence[Sequence[int]]) -> Sequence[int]:
         # sorted_intervals = sorted(enumerate(intervals), key=lambda x: x[1][0])
         l = sorted((e[0], i) for i, e in enumerate(intervals))
         res = []

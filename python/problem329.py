@@ -1,11 +1,11 @@
 import itertools
 from functools import lru_cache
 from itertools import starmap
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
+    def longestIncreasingPath(self, matrix: Sequence[Sequence[int]]) -> int:
         neighbors = [(0, 1), (1, 0), (-1, 0), (0, -1)]
         r = len(matrix)
         c = len(matrix[0])
@@ -30,7 +30,7 @@ class Solution:
         return max_path
 
     # dfs + cache
-    def longestIncreasingPath2(self, matrix: List[List[int]]) -> int:
+    def longestIncreasingPath2(self, matrix: Sequence[Sequence[int]]) -> int:
 
         m, n = len(matrix), len(matrix[0])
 

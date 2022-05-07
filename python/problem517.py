@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findMinMoves(self, machines: List[int]) -> int:
+    def findMinMoves(self, machines: Sequence[int]) -> int:
         total, n = sum(machines), len(machines)
         if total % n:
             return -1

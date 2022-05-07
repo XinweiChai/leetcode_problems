@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findLengthOfLCIS(self, nums: List[int]) -> int:
+    def findLengthOfLCIS(self, nums: Sequence[int]) -> int:
         max_len = 1
         anchor = 0
         for i in range(1, len(nums)):

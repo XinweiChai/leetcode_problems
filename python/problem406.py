@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 # class Solution:
-#     def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
+#     def reconstructQueue(self, people: Sequence[Sequence[int]]) -> Sequence[Sequence[int]]:
 #         # Using insert, O(n^2)
 #         people.sort(key=lambda x: (-x[0], x[1]))
 #         res = []
@@ -55,7 +55,7 @@ class SegmentTree:
 
 
 class Solution:
-    def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
+    def reconstructQueue(self, people: Sequence[Sequence[int]]) -> Sequence[Sequence[int]]:
         if not people:
             return []
         people.sort(key=lambda x: [x[0], -x[1]])

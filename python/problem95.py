@@ -1,9 +1,9 @@
 from TreeNode import TreeNode
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    # def generateTrees(self, n: int) -> List[TreeNode]:
+    # def generateTrees(self, n: int) -> Sequence[TreeNode]:
     #     cand = list(range(1, 1 + n))
     #
     #     def fill_tree(nums):
@@ -19,7 +19,7 @@ class Solution:
     #     return fill_tree(cand)
 
     # With memo
-    def generateTrees(self, n: int) -> List[TreeNode]:
+    def generateTrees(self, n: int) -> Sequence[TreeNode]:
         cand = list(range(1, 1 + n))
         memo = {}
 

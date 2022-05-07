@@ -1,9 +1,9 @@
 from functools import lru_cache
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    # def combinationSum4(self, nums: List[int], target: int) -> int:
+    # def combinationSum4(self, nums: Sequence[int], target: int) -> int:
     #     @lru_cache
     #     def rec(target):
     #         if target == 0:

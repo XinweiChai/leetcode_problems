@@ -5,12 +5,12 @@ class Node:
         self.val = val
         self.children = children
 """
-from typing import List
+from typing import Sequence
 from collections import deque
 
 
 class Solution:
-    def levelOrder(self, root: 'Node') -> List[List[int]]:
+    def levelOrder(self, root: 'Node') -> Sequence[Sequence[int]]:
         if root is None:
             return []
         res = []

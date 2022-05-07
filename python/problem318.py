@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from collections import Counter
 
 
 class Solution:
-    def maxProduct(self, words: List[str]) -> int:
+    def maxProduct(self, words: Sequence[str]) -> int:
         cnts = []
         res = 0
         for idx, i in enumerate(words):
@@ -14,7 +14,7 @@ class Solution:
         return res
 
     # Smarter solution
-    def maxProduct2(self, words: List[str]) -> int:
+    def maxProduct2(self, words: Sequence[str]) -> int:
         d = {}
         for w in words:
             mask = 0

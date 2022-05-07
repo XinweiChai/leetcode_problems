@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from collections import defaultdict
 
 
 class Solution:
-    def numberOfArithmeticSlices(self, nums: List[int]) -> int:
+    def numberOfArithmeticSlices(self, nums: Sequence[int]) -> int:
         n = len(nums)
         f = [{} for _ in range(n)]  # map from (i, d) to freq
         cnt = 0
@@ -14,7 +14,7 @@ class Solution:
                 f[i][diff] = f[i].get(diff, 0) + f[j].get(diff, 0) + 1
         return cnt
 
-    def numberOfArithmeticSlices2(self, nums: List[int]) -> int:
+    def numberOfArithmeticSlices2(self, nums: Sequence[int]) -> int:
         positions = defaultdict(list)
         n = len(nums) - 1
         for i, a in enumerate(reversed(nums)):

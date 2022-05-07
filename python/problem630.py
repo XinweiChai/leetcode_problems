@@ -1,11 +1,11 @@
 from functools import lru_cache
-from typing import List
+from typing import Sequence
 import heapq
 
 
 class Solution:
     # Recursive approach
-    def scheduleCourse(self, courses: List[List[int]]) -> int:
+    def scheduleCourse(self, courses: Sequence[Sequence[int]]) -> int:
         courses.sort(key=lambda x: x[1])
 
         @lru_cache
@@ -21,7 +21,7 @@ class Solution:
         return schedule(0, 0)
 
     # Iterative approach with optimizations in searching the taken course with longest duration
-    def scheduleCourse2(self, courses: List[List[int]]) -> int:
+    def scheduleCourse2(self, courses: Sequence[Sequence[int]]) -> int:
         courses.sort(key=lambda x: x[1])
         time = 0
         cnt = 0
@@ -43,7 +43,7 @@ class Solution:
     # Using priority queue / heap to store the taken courses
     # If the current course cannot be taken,
     # Try to replace the course with the longest duration with the current course
-    def scheduleCourse3(self, courses: List[List[int]]) -> int:
+    def scheduleCourse3(self, courses: Sequence[Sequence[int]]) -> int:
         courses.sort(key=lambda x: x[1])
         time = 0
         taken = []

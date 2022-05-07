@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+    def spiralOrder(self, matrix: Sequence[Sequence[int]]) -> Sequence[int]:
         if not matrix: return []
         R, C = len(matrix), len(matrix[0])
         seen = [[False] * C for _ in matrix]
@@ -21,7 +21,7 @@ class Solution:
                 r, c = r + dr[di], c + dc[di]
         return ans
 
-#     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+#     def spiralOrder(self, matrix: Sequence[Sequence[int]]) -> Sequence[int]:
 #         left_limit = 0
 #         top_limit = 0
 #         right_limit = len(matrix[0]) - 1

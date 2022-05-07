@@ -1,4 +1,4 @@
-from typing import List
+from typing import Sequence
 
 
 # Definition for a QuadTree node.
@@ -13,7 +13,7 @@ class Node:
 
 
 class Solution:
-    def construct(self, grid: List[List[int]]) -> 'Node':
+    def construct(self, grid: Sequence[Sequence[int]]) -> 'Node':
         n = len(grid)
 
         def check(x1, y1, x2, y2):

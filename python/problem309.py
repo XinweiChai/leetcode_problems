@@ -1,10 +1,10 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     # Similar to solution LC188
     #
-    def maxProfit(self, prices: List[int]) -> int:
+    def maxProfit(self, prices: Sequence[int]) -> int:
         dp = [0] * (len(prices) + 2)
         max_val = -prices[0]
         for i in range(1, len(prices)):
@@ -13,7 +13,7 @@ class Solution:
         return dp[-1]
 
     # Using O(1) space
-    def maxProfit2(self, prices: List[int]) -> int:
+    def maxProfit2(self, prices: Sequence[int]) -> int:
         two_day_bef = one_day_bef = cur = 0
         max_val = -prices[0]
         for i in range(1, len(prices)):
@@ -24,7 +24,7 @@ class Solution:
         return cur
 
     # Using one less variable
-    def maxProfit3(self, prices: List[int]) -> int:
+    def maxProfit3(self, prices: Sequence[int]) -> int:
         temp = cur = 0
         max_val = -prices[0]
         for i in range(1, len(prices)):
@@ -35,7 +35,7 @@ class Solution:
         return cur
 
     # WTF
-    def maxProfit4(self, prices: List[int]) -> int:
+    def maxProfit4(self, prices: Sequence[int]) -> int:
         free = 0
         have = cool = float('-inf')
         for p in prices:

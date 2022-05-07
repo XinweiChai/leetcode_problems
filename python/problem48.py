@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def rotate(self, matrix: List[List[int]]):
+    def rotate(self, matrix: Sequence[Sequence[int]]):
         """
         Do not return anything, modify matrix in-place instead.
         """

@@ -1,10 +1,10 @@
 import bisect
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     # O(n^2logn)
-    def triangleNumber(self, nums: List[int]) -> int:
+    def triangleNumber(self, nums: Sequence[int]) -> int:
         nums.sort()
         n = len(nums)
         cnt = 0
@@ -19,7 +19,7 @@ class Solution:
         return cnt
 
     # linear search approach, O(n^2)
-    def triangleNumber2(self, nums: List[int]) -> int:
+    def triangleNumber2(self, nums: Sequence[int]) -> int:
         nums.sort()
         res = 0
 

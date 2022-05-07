@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def calculateMinimumHP(self, dungeon: List[List[int]]) -> int:
+    def calculateMinimumHP(self, dungeon: Sequence[Sequence[int]]) -> int:
         m, n = len(dungeon), len(dungeon[0])
         dp = [[float("inf")] * (n + 1) for _ in range(m + 1)]
         dp[m - 1][n], dp[m][n - 1] = 1, 1

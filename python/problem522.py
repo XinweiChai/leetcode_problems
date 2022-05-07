@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findLUSlength(self, strs: List[str]) -> int:
+    def findLUSlength(self, strs: Sequence[str]) -> int:
         def issubsequence(s, t):
             t = iter(t)
             return all(c in t for c in s)

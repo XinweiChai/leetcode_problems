@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxProfit(self, prices: List[int], fee: int) -> int:
+    def maxProfit(self, prices: Sequence[int], fee: int) -> int:
         not_hold = 0
         hold = -prices[0] - fee
         for i in range(1, len(prices)):

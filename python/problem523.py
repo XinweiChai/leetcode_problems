@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     # TO
-    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+    def checkSubarraySum(self, nums: Sequence[int], k: int) -> bool:
         if len(nums) <= 1:
             return False
         sum_n = sum(nums)
@@ -26,7 +26,7 @@ class Solution:
             cur += k
         return False
 
-    def checkSubarraySum2(self, nums: List[int], k: int) -> bool:
+    def checkSubarraySum2(self, nums: Sequence[int], k: int) -> bool:
         preRemainder = {0: -1}
 
         cur = 0

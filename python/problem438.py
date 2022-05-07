@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from collections import Counter
 
 
 class Solution:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
+    def findAnagrams(self, s: str, p: str) -> Sequence[int]:
         c1 = Counter(p)
         c2 = Counter(s[:len(p)])
         satisfied = 0

@@ -1,10 +1,10 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
 
     # Maximum recursion
-    def maxCoins(self, nums: List[int]) -> int:
+    def maxCoins(self, nums: Sequence[int]) -> int:
         nums = [1] + [i for i in nums if i != 0] + [1]
         n = len(nums)
         memo = {}
@@ -20,7 +20,7 @@ class Solution:
 
         return dp(1, n - 2)
 
-    def maxCoins2(self, nums: List[int]) -> int:
+    def maxCoins2(self, nums: Sequence[int]) -> int:
         nums = [1] + [i for i in nums if i > 0] + [1]
         n = len(nums)
         dp = [[0] * n for _ in range(n)]

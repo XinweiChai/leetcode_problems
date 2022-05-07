@@ -1,4 +1,4 @@
-from typing import List, Type, Any
+from typing import Sequence, Type, Any
 from collections import deque
 
 
@@ -58,7 +58,7 @@ class TreeNode:
         return temp
 
 
-def create_tree(l: List[Any], cl: Type = TreeNode):
+def create_tree(l: Sequence[Any], cl: Type = TreeNode):
     assert issubclass(cl, TreeNode)
     if isinstance(l[0], list):
         root = cl(l[0][0])

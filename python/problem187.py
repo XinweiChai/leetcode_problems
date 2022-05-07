@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findRepeatedDnaSequences(self, s: str) -> List[str]:
+    def findRepeatedDnaSequences(self, s: str) -> Sequence[str]:
         seen = set()
         dup = set()
         for i in range(len(s) - 9):

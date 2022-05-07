@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def numberOfBoomerangs(self, points: List[List[int]]) -> int:
+    def numberOfBoomerangs(self, points: Sequence[Sequence[int]]) -> int:
         cnt = 0
         for x1, y1 in points:
             lookup = {}

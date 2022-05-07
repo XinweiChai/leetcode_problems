@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findWords(self, words: List[str]) -> List[str]:
+    def findWords(self, words: Sequence[str]) -> Sequence[str]:
         lines = [set(i) for i in ["qwertyuiopQWERTYUIOP", "asdfghjklASDFGHJKL", "zxcvbnmZXCVBNM"]]
         res = [i for i in words for j in lines if set(i).issubset(j)]
         return res

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+    def findMaxForm(self, strs: Sequence[str], m: int, n: int) -> int:
         strs = sorted((i.count('0'), i.count('1')) for i in strs)
 
         memo = {}
@@ -19,7 +19,7 @@ class Solution:
 
         return dp(0, m, n)
 
-    def findMaxForm2(self, strs: List[str], m: int, n: int) -> int:
+    def findMaxForm2(self, strs: Sequence[str], m: int, n: int) -> int:
         strs = [(i.count('0'), i.count('1')) for i in strs]
 
         def getResult(s, zero, one):

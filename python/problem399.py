@@ -1,9 +1,9 @@
 from collections import defaultdict
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
+    def calcEquation(self, equations: Sequence[Sequence[str]], values: Sequence[float], queries: Sequence[Sequence[str]]) -> Sequence[float]:
         graph = defaultdict(list)
         n = len(equations)
         for i in range(n):

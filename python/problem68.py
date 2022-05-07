@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    # def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
+    # def fullJustify(self, words: Sequence[str], maxWidth: int) -> Sequence[str]:
     #     text = []
     #     tot = 0
     #     l = 0

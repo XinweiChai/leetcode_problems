@@ -1,9 +1,9 @@
 from TreeNode import TreeNode
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+    def buildTree(self, inorder: Sequence[int], postorder: Sequence[int]) -> TreeNode:
         map_inorder = {}
         for i, val in enumerate(inorder):
             map_inorder[val] = i

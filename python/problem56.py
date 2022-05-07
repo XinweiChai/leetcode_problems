@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    def merge(self, intervals: Sequence[Sequence[int]]) -> Sequence[Sequence[int]]:
         intervals = sorted(intervals, key=lambda x: x[0])
         merged = [intervals[0]]
         for i in intervals[1:]:

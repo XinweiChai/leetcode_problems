@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def sortColors(self, nums: List[int]) -> None:
+    def sortColors(self, nums: Sequence[int]) -> None:
         # Bubble sort
         # for i in range(len(nums) - 1):
         #     for j in range(len(nums)-i-1):

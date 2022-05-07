@@ -1,4 +1,4 @@
-from typing import List
+from typing import Sequence
 import heapq
 
 
@@ -14,7 +14,7 @@ class Solution:
     used_line is to avoid the push of position x
     """
 
-    def kSmallestPairs(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
+    def kSmallestPairs(self, nums1: Sequence[int], nums2: Sequence[int], k: int) -> Sequence[Sequence[int]]:
         queue = []
         used_line = [False] * len(nums1)
 

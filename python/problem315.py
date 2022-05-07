@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def countSmaller(self, nums: List[int]) -> List[int]:
+    def countSmaller(self, nums: Sequence[int]) -> Sequence[int]:
         # def binary_search(left, right, num):
         #     if left == right:
         #         return left

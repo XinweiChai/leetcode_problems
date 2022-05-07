@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def canJump(self, nums: List[int]) -> bool:
+    def canJump(self, nums: Sequence[int]) -> bool:
         if len(nums) == 1:
             return True
         p = 0

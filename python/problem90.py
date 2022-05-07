@@ -1,9 +1,9 @@
 from collections import Counter
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def subsetsWithDup(self, nums: List[int])->List[List[int]]:
+    def subsetsWithDup(self, nums: Sequence[int])->Sequence[Sequence[int]]:
         nums = Counter(nums)
         res = [[]]
         for i in nums:

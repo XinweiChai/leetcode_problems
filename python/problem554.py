@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def leastBricks(self, wall: List[List[int]]) -> int:
+    def leastBricks(self, wall: Sequence[Sequence[int]]) -> int:
         tot = sum(wall[0])
         if tot == 1:
             return len(wall)

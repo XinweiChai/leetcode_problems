@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
+    def uniquePathsWithObstacles(self, obstacleGrid: Sequence[Sequence[int]]) -> int:
         # Using O(n) space
         m = len(obstacleGrid)
         n = len(obstacleGrid[0])

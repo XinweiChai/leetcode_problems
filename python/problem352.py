@@ -1,6 +1,6 @@
 import bisect
 import heapq
-from typing import List
+from typing import Sequence
 
 
 class DisjointSet:
@@ -43,7 +43,7 @@ class SummaryRanges:
     def addNum(self, val: int) -> None:
         self.ds.make_set(val)
 
-    def getIntervals(self) -> List[List[int]]:
+    def getIntervals(self) -> Sequence[Sequence[int]]:
         return sorted(self.ds.grp_max.items())
 
 
@@ -88,7 +88,7 @@ class SummaryRanges2:
         else:
             self.intervals.insert(index, [val, val])
 
-    def getIntervals(self) -> List[List[int]]:
+    def getIntervals(self) -> Sequence[Sequence[int]]:
         return self.intervals
 
 
@@ -107,7 +107,7 @@ class SummaryRanges3:
             self.seen.add(val)
             heapq.heappush(self.intervals, [val, val])
 
-    def getIntervals(self) -> List[List[int]]:
+    def getIntervals(self) -> Sequence[Sequence[int]]:
         tmp = []
 
         while self.intervals:

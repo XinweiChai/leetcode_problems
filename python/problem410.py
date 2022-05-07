@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     # Time out, even with cumulative sum and max and memoization
-    def splitArray(self, nums: List[int], m: int) -> int:
+    def splitArray(self, nums: Sequence[int], m: int) -> int:
         n = len(nums)
         memo = {}
         cumul_sum = [0] * (n + 1)
@@ -28,7 +28,7 @@ class Solution:
         return dfs(0, m - 1)
 
 
-    def splitArray2(self, nums: List[int], m: int) -> int:
+    def splitArray2(self, nums: Sequence[int], m: int) -> int:
         low, high, ans = max(nums), sum(nums), -1
 
         def is_valid(m, mid):

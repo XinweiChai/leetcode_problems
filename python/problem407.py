@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import heapq
 
 
 class Solution:
-    def trapRainWater(self, heightMap: List[List[int]]) -> int:
+    def trapRainWater(self, heightMap: Sequence[Sequence[int]]) -> int:
         r = len(heightMap)
         c = len(heightMap[0])
         if r < 3 or c < 3:

@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import collections
 
 
 class Solution:
-    def findItinerary(self, tickets: List[List[str]]) -> List[str]:
+    def findItinerary(self, tickets: Sequence[Sequence[str]]) -> Sequence[str]:
         targets = collections.defaultdict(list)
         for a, b in sorted(tickets, reverse=True):
             targets[a].append(b)

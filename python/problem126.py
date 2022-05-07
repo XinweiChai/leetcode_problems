@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import collections
 
 
 class Solution:
-    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
+    def findLadders(self, beginWord: str, endWord: str, wordList: Sequence[str]) -> Sequence[Sequence[str]]:
         # One-way BFS
         # wordList = set(wordList)
         # wordList.discard(beginWord)

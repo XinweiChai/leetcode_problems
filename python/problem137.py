@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
+    def singleNumber(self, nums: Sequence[int]) -> int:
         s = set(nums)
         return (sum(s) * 3 - sum(nums)) // 2
 

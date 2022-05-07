@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum(self, candidates: Sequence[int], target: int) -> Sequence[Sequence[int]]:
         # def recursion(state, sum, cur):
         #     if target == sum:
         #         temp = []

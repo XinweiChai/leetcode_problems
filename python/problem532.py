@@ -1,9 +1,9 @@
 from collections import Counter
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findPairs(self, nums: List[int], k: int) -> int:
+    def findPairs(self, nums: Sequence[int], k: int) -> int:
         nums = sorted(nums)
         pairs = set()
         l = 0
@@ -18,7 +18,7 @@ class Solution:
         return len(pairs)
 
     # Clean solution
-    def findPairs2(self, nums: List[int], k: int) -> int:
+    def findPairs2(self, nums: Sequence[int], k: int) -> int:
         if k == 0:
             counter = Counter(nums)
             return sum(counter[i] > 1 for i in counter)

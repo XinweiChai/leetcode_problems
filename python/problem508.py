@@ -1,10 +1,10 @@
-from typing import List, Optional
+from typing import Sequence, Optional
 
 from TreeNode import create_tree, TreeNode
 
 
 class Solution:
-    def findFrequentTreeSum(self, root: Optional[TreeNode]) -> List[int]:
+    def findFrequentTreeSum(self, root: Optional[TreeNode]) -> Sequence[int]:
         freq = {}
 
         def analysis(node):

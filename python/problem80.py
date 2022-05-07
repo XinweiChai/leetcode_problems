@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums: Sequence[int]) -> int:
         i = 0
         for n in nums:
             if i < 2 or n > nums[i - 2]:

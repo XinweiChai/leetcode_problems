@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from math import factorial
 
 
 class Solution:
-    def getRow(self, rowIndex: int) -> List[int]:
+    def getRow(self, rowIndex: int) -> Sequence[int]:
         # return [factorial(rowIndex) // factorial(i) // factorial(rowIndex - i) for i in range(rowIndex + 1)]
         res = [1] * (rowIndex + 1)
         for i in range(1, rowIndex // 2 + 1):

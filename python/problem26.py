@@ -1,5 +1,5 @@
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums: Sequence[int]) -> int:
         if not nums:
             return 0
         cur = 1

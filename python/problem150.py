@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def evalRPN(self, tokens: List[str]) -> int:
+    def evalRPN(self, tokens: Sequence[str]) -> int:
         stack = []
         for i in tokens:
             if '0' <= i[0] <= '9' or (i[0] == '-' and len(i) > 1):

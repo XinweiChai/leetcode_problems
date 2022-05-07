@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def exist(self, board: List[List[str]], word: str) -> bool:
+    def exist(self, board: Sequence[Sequence[str]], word: str) -> bool:
         r = len(board)
         c = len(board[0])
 

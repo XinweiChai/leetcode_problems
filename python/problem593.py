@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def validSquare(self, p1: List[int], p2: List[int], p3: List[int], p4: List[int]) -> bool:
+    def validSquare(self, p1: Sequence[int], p2: Sequence[int], p3: Sequence[int], p4: Sequence[int]) -> bool:
         cnt = 0
         p1 = tuple(p1)
         p2 = tuple(p2)
@@ -22,7 +22,7 @@ class Solution:
                     break
         return cnt == 3
 
-    def validSquare2(self, p1: List[int], p2: List[int], p3: List[int], p4: List[int]) -> bool:
+    def validSquare2(self, p1: Sequence[int], p2: Sequence[int], p3: Sequence[int], p4: Sequence[int]) -> bool:
         # p1, p2, p3, p4
 
         # p2p1 needs to be perpendicular to p3p1

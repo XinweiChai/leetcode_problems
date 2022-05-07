@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def singleNonDuplicate(self, nums: List[int]):
+    def singleNonDuplicate(self, nums: Sequence[int]):
         lo, hi = 0, len(nums) - 1
         while lo < hi:
             mid = (lo + hi) // 2
@@ -13,7 +13,7 @@ class Solution:
         return nums[lo]
 
 
-    def singleNonDuplicate2(self, nums: List[int]) -> int:
+    def singleNonDuplicate2(self, nums: Sequence[int]) -> int:
         low = 0
         high = len(nums) - 1
 

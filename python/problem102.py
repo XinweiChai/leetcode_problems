@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from TreeNode import TreeNode
 
 
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def levelOrder(self, root: TreeNode) -> Sequence[Sequence[int]]:
         if not root:
             return []
         ans = []

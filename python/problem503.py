@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def nextGreaterElements(self, nums: List[int]) -> List[int]:
+    def nextGreaterElements(self, nums: Sequence[int]) -> Sequence[int]:
         n = len(nums)
         res = [-1] * n
         stack = []

@@ -1,10 +1,10 @@
-from typing import List
+from typing import Sequence
 import heapq
 import random
 
 class Solution:
     # O(n), quick selection
-    def findKthLargest(self, nums: List[int], k: int) -> int:
+    def findKthLargest(self, nums: Sequence[int], k: int) -> int:
         return self.findKthSmallest(nums, len(nums) + 1 - k)
 
     def findKthSmallest(self, nums, k):

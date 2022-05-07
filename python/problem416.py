@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def canPartition(self, nums: List[int]) -> bool:
+    def canPartition(self, nums: Sequence[int]) -> bool:
         # O(n^2) solution
         if sum(nums) & 1 == 0:
             target = sum(nums) >> 1

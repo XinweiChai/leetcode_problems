@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     # s_2 > s_3 > s_1
-    def find132pattern(self, nums: List[int]) -> bool:
+    def find132pattern(self, nums: Sequence[int]) -> bool:
         stack = []
         s3 = float('-inf')
         for n in nums[::-1]:
@@ -17,7 +17,7 @@ class Solution:
         return False
 
     # Using O(1) space, make use of the original list as a stack
-    def find132pattern2(self, nums: List[int]) -> bool:
+    def find132pattern2(self, nums: Sequence[int]) -> bool:
         n = top = len(nums)
         third = float('-inf')
         for i in range(n - 1, -1, -1):

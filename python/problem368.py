@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def largestDivisibleSubset(self, nums: List[int]) -> List[int]:
+    def largestDivisibleSubset(self, nums: Sequence[int]) -> Sequence[int]:
         S = {-1: set()}
         for x in sorted(nums):
             S[x] = max((S[d] for d in S if x % d == 0), key=len).union({x})

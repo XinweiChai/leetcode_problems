@@ -1,11 +1,11 @@
-from typing import List
+from typing import Sequence
 import random
 import bisect
 
 
 class Solution:
 
-    def __init__(self, w: List[int]):
+    def __init__(self, w: Sequence[int]):
         total = sum(w)
         self.weight = []
 

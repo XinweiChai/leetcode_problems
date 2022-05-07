@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findMinArrowShots(self, points: List[List[int]]) -> int:
+    def findMinArrowShots(self, points: Sequence[Sequence[int]]) -> int:
         points.sort(key=lambda x: x[1])
         cnt = 0
         arrow = float('-inf')

@@ -1,4 +1,4 @@
-from typing import List
+from typing import Sequence
 from itertools import product
 import re
 
@@ -6,7 +6,7 @@ import re
 class Solution:
 
     # Too slow
-    def addOperators(self, num: str, target: int) -> List[str]:
+    def addOperators(self, num: str, target: int) -> Sequence[str]:
         res = []
         for i in product(['+', '-', '*', ''], repeat=len(num) - 1):
             expr = ''.join([num[j] + i[j] for j in range(len(num) - 1)] + [num[-1]])
@@ -15,7 +15,7 @@ class Solution:
         return res
 
     # A little bit faster
-    def addOperators2(self, num: str, target: int) -> List[str]:
+    def addOperators2(self, num: str, target: int) -> Sequence[str]:
         res = []
 
         def dfs(done, todo, last_num):
@@ -33,7 +33,7 @@ class Solution:
         return res
 
     # Another version of solution 2
-    def addOperators3(self, num: str, target: int) -> List[str]:
+    def addOperators3(self, num: str, target: int) -> Sequence[str]:
         res = []
 
         def dfs(done, todo):
@@ -52,7 +52,7 @@ class Solution:
 
     # eval(done) in solution 2 and solution 3 repeatedly computes the result of prefix,
     # thus this solution is much faster
-    def addOperators4(self, num: str, target: int) -> List[str]:
+    def addOperators4(self, num: str, target: int) -> Sequence[str]:
         res = []
 
         def dfs(num, temp, cur, last):
@@ -71,7 +71,7 @@ class Solution:
         return res
 
     # Optimize string-copy
-    def addOperators5(self, num: str, target: int) -> List[str]:
+    def addOperators5(self, num: str, target: int) -> Sequence[str]:
         res = []
 
         def dfs(start, temp, cur, last):

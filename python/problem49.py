@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs: Sequence[str]) -> Sequence[Sequence[str]]:
         ans = {}
         for s in strs:
             count = [0] * 26

@@ -1,4 +1,4 @@
-from typing import List
+from typing import Sequence
 from bisect import bisect
 
 
@@ -49,7 +49,7 @@ class BST_Node:
 
 
 class Solution:
-    def reversePairs(self, nums: List[int]) -> int:
+    def reversePairs(self, nums: Sequence[int]) -> int:
         tree = BST_Node(nums[0])
         cnt = 0
         for i in range(1, len(nums)):
@@ -58,7 +58,7 @@ class Solution:
         return cnt
 
     # Merge sort
-    def reversePairs2(self, nums: List[int]) -> int:
+    def reversePairs2(self, nums: Sequence[int]) -> int:
         def mergeSort(nums):
             if len(nums) <= 1:
                 return nums, 0
@@ -76,7 +76,7 @@ class Solution:
         return mergeSort(nums)[1]
 
     # Using insert trick
-    def reversePairs3(self, nums: List[int]) -> int:
+    def reversePairs3(self, nums: Sequence[int]) -> int:
         left = []
         ans = 0
         for i, n in enumerate(nums):

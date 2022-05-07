@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
+    def isValidSudoku(self, board: Sequence[Sequence[str]]) -> bool:
         r = len(board)
         for i in range(r):
             row = [True] * r

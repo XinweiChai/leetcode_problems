@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from collections import Counter
 
 
 class Solution:
-    def partitionLabels(self, S: str) -> List[int]:
+    def partitionLabels(self, S: str) -> Sequence[int]:
         # c1 = Counter(S)
         # c2 = Counter()
         # to_satisfy = 0

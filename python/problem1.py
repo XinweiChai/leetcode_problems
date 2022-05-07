@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: Sequence[int], target: int) -> Sequence[int]:
         # Worse solution, sort and search O(nlogn)
         # nums = list(enumerate(nums))
         # nums.sort(key=lambda x: x[1])
@@ -25,5 +25,5 @@ class Solution:
             else:
                 return [h[n], i]
 
-
-print(Solution().twoSum([-3, 4, 3, 90], 0))
+if __name__ == '__main__':
+    print(Solution().twoSum([-3, 4, 3, 90], 0))

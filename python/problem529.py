@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def updateBoard(self, board: List[List[str]], click: List[int]) -> List[List[str]]:
+    def updateBoard(self, board: Sequence[Sequence[str]], click: Sequence[int]) -> Sequence[Sequence[str]]:
         r = len(board)
         c = len(board[0])
         cr, cc = click

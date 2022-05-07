@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def isRectangleCover(self, rectangles: List[List[int]]) -> bool:
+    def isRectangleCover(self, rectangles: Sequence[Sequence[int]]) -> bool:
         x1 = float('inf')
         x2 = float('-inf')
         y1 = float('inf')
@@ -31,7 +31,7 @@ class Solution:
             return False
         return area == (x2 - x1) * (y2 - y1)
 
-    def isRectangleCover2(self, rectangles: List[List[int]]) -> bool:
+    def isRectangleCover2(self, rectangles: Sequence[Sequence[int]]) -> bool:
         points = set()
         area = 0
         for rect in rectangles:

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findDuplicate(self, nums: List[int]) -> int:
+    def findDuplicate(self, nums: Sequence[int]) -> int:
         tortoise = nums[0]
         hare = nums[nums[0]]
         while tortoise != hare:

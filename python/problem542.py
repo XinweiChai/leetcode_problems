@@ -1,10 +1,10 @@
-from typing import List
+from typing import Sequence
 import collections
 
 
 class Solution:
     # BFS
-    def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
+    def updateMatrix(self, mat: Sequence[Sequence[int]]) -> Sequence[Sequence[int]]:
         row = len(mat)
         col = len(mat[0])
 
@@ -34,7 +34,7 @@ class Solution:
         return mat
 
     # Update from two directions, guaranteeing the value is less than or equal to its neighbor + 1
-    def updateMatrix2(self, mat: List[List[int]]) -> List[List[int]]:
+    def updateMatrix2(self, mat: Sequence[Sequence[int]]) -> Sequence[Sequence[int]]:
         r = len(mat)
         c = len(mat[0])
         dist = [[float('inf') if mat[i][j] == 1 else 0 for j in range(c)] for i in range(r)]

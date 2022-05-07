@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+    def wordBreak(self, s: str, wordDict: Sequence[str]) -> bool:
         wordDict = set(wordDict)
 
         dp_table = [False] * len(s)

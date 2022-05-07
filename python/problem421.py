@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findMaximumXOR(self, nums: List[int]) -> int:
+    def findMaximumXOR(self, nums: Sequence[int]) -> int:
         # length of max number in a binary representation
         L = len(bin(max(nums))) - 2
         max_xor = 0

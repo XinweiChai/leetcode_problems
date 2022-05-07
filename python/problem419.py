@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def countBattleships(self, board: List[List[str]]) -> int:
+    def countBattleships(self, board: Sequence[Sequence[str]]) -> int:
         r = len(board)
         c = len(board[0])
         cnt = 0

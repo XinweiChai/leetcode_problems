@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
+    def searchInsert(self, nums: Sequence[int], target: int) -> int:
         def rec(l, r):
             if l == r:
                 return l

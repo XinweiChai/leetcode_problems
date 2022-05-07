@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findMaxLength(self, nums: List[int]) -> int:
+    def findMaxLength(self, nums: Sequence[int]) -> int:
         left = {0: -1}
         cur = 0
         max_len = 0

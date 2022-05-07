@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxArea(self, height: List[int]) -> int:
+    def maxArea(self, height: Sequence[int]) -> int:
         left = 0
         right = len(height) - 1
         max_val = 0

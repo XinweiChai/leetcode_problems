@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def hIndex(self, citations: List[int]) -> int:
+    def hIndex(self, citations: Sequence[int]) -> int:
         left = 0
         n = len(citations)
         right = n - 1

@@ -1,9 +1,9 @@
 import collections
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
+    def maxSlidingWindow(self, nums: Sequence[int], k: int) -> Sequence[int]:
         n = len(nums)
         r = []
         q = collections.deque()

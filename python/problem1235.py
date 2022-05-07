@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 import bisect
 
 class Solution:
-    def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
+    def jobScheduling(self, startTime: Sequence[int], endTime: Sequence[int], profit: Sequence[int]) -> int:
         jobs = sorted(zip(startTime, endTime, profit), key=lambda x: x[1])
         dp = [[0, 0]]
         for s, e, p in jobs:

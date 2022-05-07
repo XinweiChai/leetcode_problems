@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import math
 
 
 # class Solution:
-#     def maximumGap(self, nums: List[int]) -> int:
+#     def maximumGap(self, nums: Sequence[int]) -> int:
 #         min_val = min(nums)
 #         max_val = max(nums)
 #         if len(nums) <= 2:

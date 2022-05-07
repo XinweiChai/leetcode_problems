@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:
+    def coinChange(self, coins: Sequence[int], amount: int) -> int:
         # recursion with dp, costing a lot of memory
         # if amount == 0:
         #     return 0

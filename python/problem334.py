@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def increasingTriplet(self, nums: List[int]) -> bool:
+    def increasingTriplet(self, nums: Sequence[int]) -> bool:
         first = second = float('inf')
         for n in nums:
             if n <= first:

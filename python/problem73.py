@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def setZeroes(self, matrix: List[List[int]]):
+    def setZeroes(self, matrix: Sequence[Sequence[int]]):
         """
         Do not return anything, modify matrix in-place instead.
         """

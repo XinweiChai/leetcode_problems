@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def letterCombinations(self, digits: str) -> List[str]:
+    def letterCombinations(self, digits: str) -> Sequence[str]:
         if not digits:
             return []
         res = [""]

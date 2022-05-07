@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import heapq
 
 
 class Solution:
-    def findUnsortedSubarray(self, nums: List[int]) -> int:
+    def findUnsortedSubarray(self, nums: Sequence[int]) -> int:
         # O(nlogn)
         # aux = sorted(nums)
         # l = 0

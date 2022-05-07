@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
+    def findDisappearedNumbers(self, nums: Sequence[int]) -> Sequence[int]:
         if not nums:
             return []
         for i in range(len(nums)):

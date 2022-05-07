@@ -1,10 +1,10 @@
-from typing import List
+from typing import Sequence
 
 from TreeNode import TreeNode
 
 
 class Solution:
-    def zigzagLevelOrder(self, root: TreeNode) ->List[List[int]]:
+    def zigzagLevelOrder(self, root: TreeNode) ->Sequence[Sequence[int]]:
         if not root:
             return []
         ans = []

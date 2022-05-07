@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def subarraySum(self, nums: List[int], k: int) -> int:
+    def subarraySum(self, nums: Sequence[int], k: int) -> int:
         # Timeout O(n^3)
         # cnt = 0
         # n = len(nums)

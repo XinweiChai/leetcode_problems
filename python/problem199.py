@@ -1,8 +1,8 @@
-from TreeNode import TreeNodefrom typing import List
+from TreeNode import TreeNodefrom typing import Sequence
 
 
 class Solution:
-    def rightSideView(self, root: TreeNode) -> List[int]:
+    def rightSideView(self, root: TreeNode) -> Sequence[int]:
         # if not root:
         #     return []
         # cur = [root]

@@ -1,11 +1,11 @@
 import collections
-from typing import Optional, List
+from typing import Optional, Sequence
 
 from TreeNode import TreeNode
 
 
 class Solution:
-    def largestValues(self, root: Optional[TreeNode]) -> List[int]:
+    def largestValues(self, root: Optional[TreeNode]) -> Sequence[int]:
         if not root:
             return []
         q = collections.deque([root])

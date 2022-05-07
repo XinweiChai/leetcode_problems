@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def palindromePairs(self, words: List[str]) -> List[List[int]]:
+    def palindromePairs(self, words: Sequence[str]) -> Sequence[Sequence[int]]:
         # False means the word is not reversed, True means the word is reversed
         buckets = sorted([(w, False, i) for i, w in enumerate(words)] +
                          [(w[::-1], True, i) for i, w in enumerate(words)])

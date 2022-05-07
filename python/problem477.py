@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def totalHammingDistance(self, nums: List[int]) -> int:
+    def totalHammingDistance(self, nums: Sequence[int]) -> int:
         digits = [0] * 30
         for i in nums:
             pos = 0

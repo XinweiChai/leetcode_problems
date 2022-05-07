@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+    def findWords(self, board: Sequence[Sequence[str]], words: Sequence[str]) -> Sequence[str]:
         coord = {}
         for i in range(ord('a'), ord('z') + 1):
             coord[chr(i)] = []

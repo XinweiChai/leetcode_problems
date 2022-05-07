@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def isCovered(self, ranges: List[List[int]], left: int, right: int) -> bool:
+    def isCovered(self, ranges: Sequence[Sequence[int]], left: int, right: int) -> bool:
         ranges.sort()
         if ranges[0][0] > left:
             return False

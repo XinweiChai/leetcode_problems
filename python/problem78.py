@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
+    def subsets(self, nums: Sequence[int]) -> Sequence[Sequence[int]]:
         # Enumeration
         # res = [[]]
         # for i in nums:

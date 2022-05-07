@@ -1,11 +1,11 @@
-from typing import List
+from typing import Sequence
 
 from python.TreeNode import TreeNode
 from collections import deque
 
 
 class Solution:
-    def averageOfLevels(self, root: TreeNode) -> List[float]:
+    def averageOfLevels(self, root: TreeNode) -> Sequence[float]:
         q = deque()
         q.append(root)
         res = []

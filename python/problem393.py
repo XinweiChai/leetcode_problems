@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def validUtf8(self, data: List[int]) -> bool:
+    def validUtf8(self, data: Sequence[int]) -> bool:
         # Number of bytes in the current UTF-8 character
         n_bytes = 0
 

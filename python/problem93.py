@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def restoreIpAddresses(self, s: str) -> List[str]:
+    def restoreIpAddresses(self, s: str) -> Sequence[str]:
         if len(s) > 12:
             return []
         res = []

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def minPatches(self, nums: List[int], n: int) -> int:
+    def minPatches(self, nums: Sequence[int], n: int) -> int:
         max_range = 1
         cnt = 0
         ptr = 0

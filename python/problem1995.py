@@ -1,9 +1,9 @@
 from collections import defaultdict
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def countQuadruplets(self, nums: List[int]) -> int:
+    def countQuadruplets(self, nums: Sequence[int]) -> int:
         # We are looking for a < b < c < d that satisfies equation nums[a] + nums[b] == nums[d] - nums[c]
         n = len(nums)
         res = 0

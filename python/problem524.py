@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findLongestWord(self, s: str, dictionary: List[str]) -> str:
+    def findLongestWord(self, s: str, dictionary: Sequence[str]) -> str:
         dictionary.sort(key=lambda x: (-len(x), x))
         for i in dictionary:
             p = -1

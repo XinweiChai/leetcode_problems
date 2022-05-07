@@ -1,10 +1,10 @@
-from typing import List
+from typing import Sequence
 
 from python.TreeNode import TreeNode
 
 
 class Solution:
-    def binaryTreePaths(self, root: TreeNode) -> List[str]:
+    def binaryTreePaths(self, root: TreeNode) -> Sequence[str]:
         res = []
         def rec(node, cur):
             if not node.left and not node.right:

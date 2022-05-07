@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+    def findCircleNum(self, isConnected: Sequence[Sequence[int]]) -> int:
         n = len(isConnected)
         visited = [False] * n
 

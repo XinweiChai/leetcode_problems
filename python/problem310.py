@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
+    def findMinHeightTrees(self, n: int, edges: Sequence[Sequence[int]]) -> Sequence[int]:
         if n == 1:
             return [0]
         dct_edge = [set() for _ in range(n)]

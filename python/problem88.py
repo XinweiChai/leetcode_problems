@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int):
+    def merge(self, nums1: Sequence[int], m: int, nums2: Sequence[int], n: int):
         """
         Do not return anything, modify nums1 in-place instead.
         """

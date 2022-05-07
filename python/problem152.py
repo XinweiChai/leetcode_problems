@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
+    def maxProduct(self, nums: Sequence[int]) -> int:
         # if len(nums) == 1:
         #     return nums[0]
         # left = 0

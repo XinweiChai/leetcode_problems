@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import bisect
 
 
 class Solution:
-    def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
+    def maxEnvelopes(self, envelopes: Sequence[Sequence[int]]) -> int:
         def lengthOfLIS(nums):
             dp = [0] * len(nums)
             l = 0

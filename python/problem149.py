@@ -1,10 +1,10 @@
 import math
 import sys
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxPoints(self, points: List[List[int]]) -> int:
+    def maxPoints(self, points: Sequence[Sequence[int]]) -> int:
         def max_points_on_a_line_containing_point_i(i):
             """
             Compute the max number of points

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maximalRectangle(self, matrix: List[List[str]]) -> int:
+    def maximalRectangle(self, matrix: Sequence[Sequence[str]]) -> int:
         def rec(left, right):
             if left == right:
                 return 0

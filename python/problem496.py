@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+    def nextGreaterElement(self, nums1: Sequence[int], nums2: Sequence[int]) -> Sequence[int]:
         d = {}
         st = []
         ans = []

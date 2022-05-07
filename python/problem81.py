@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def search(self, nums: List[int], target: int) -> bool:
+    def search(self, nums: Sequence[int], target: int) -> bool:
         # Cheat with O(n)
         # return target in nums
         def fast_bin_search(start, end):

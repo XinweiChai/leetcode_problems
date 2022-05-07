@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 
 
 class NumArray:
 
-    def __init__(self, nums: List[int]):
+    def __init__(self, nums: Sequence[int]):
         self.sums = [0] * (len(nums) + 1)
         tot = 0
         for i in range(len(nums)):

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
+    def maxProfit(self, prices: Sequence[int]) -> int:
         if not prices:
             return 0
         buy1 = float('inf')

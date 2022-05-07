@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def numSimilarGroups(self, strs: List[str]) -> int:
+    def numSimilarGroups(self, strs: Sequence[str]) -> int:
         def similar(a, b):
             cnt = 0
             for i in range(len(a)):

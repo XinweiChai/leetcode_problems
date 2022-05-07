@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def trap(self, height: List[int]) -> int:
+    def trap(self, height: Sequence[int]) -> int:
         # p = 0
         #
         # def find_right(p_left):

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def minMoves2(self, nums: List[int]) -> int:
+    def minMoves2(self, nums: Sequence[int]) -> int:
         nums.sort()
         median = nums[len(nums) // 2]
         return sum(abs(i - median) for i in nums)

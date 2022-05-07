@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def dailyTemperatures(self, T: List[int]) -> List[int]:
+    def dailyTemperatures(self, T: Sequence[int]) -> Sequence[int]:
         stack = [(float('inf'), -1)]
         out = [0] * len(T)
         for i in range(len(T)):

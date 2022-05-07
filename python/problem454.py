@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from collections import Counter
 
 
 class Solution:
-    def fourSumCount(self, A: List[int], B: List[int], C: List[int], D: List[int]) -> int:
+    def fourSumCount(self, A: Sequence[int], B: Sequence[int], C: Sequence[int], D: Sequence[int]) -> int:
         # Stupid enumeration, O(N^4)
         # ca = Counter(A)
         # cb = Counter(B)

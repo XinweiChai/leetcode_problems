@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     # Naive approach O(n^2)
-    # def countRangeSum(self, nums: List[int], lower: int, upper: int) -> int:
+    # def countRangeSum(self, nums: Sequence[int], lower: int, upper: int) -> int:
     #     cnt = 0
     #     for i in range(len(nums)):
     #         tot = 0
@@ -14,7 +14,7 @@ class Solution:
     #     return cnt
 
     # O(nlogn)
-    def countRangeSum(self, nums: List[int], lower: int, upper: int) -> int:
+    def countRangeSum(self, nums: Sequence[int], lower: int, upper: int) -> int:
         first = [0]
         for num in nums:
             first.append(first[-1] + num)

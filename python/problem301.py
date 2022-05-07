@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def removeInvalidParentheses(self, s: str) -> List[str]:
+    def removeInvalidParentheses(self, s: str) -> Sequence[str]:
         left = right = 0
         for c in s:
             if c == "(":

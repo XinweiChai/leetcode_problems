@@ -1,9 +1,9 @@
 import bisect
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxSumSubmatrix(self, matrix: List[List[int]], k: int) -> int:
+    def maxSumSubmatrix(self, matrix: Sequence[Sequence[int]], k: int) -> int:
         row_size, col_size = len(matrix), len(matrix[0])
         if any(k in row for row in matrix):
             return k

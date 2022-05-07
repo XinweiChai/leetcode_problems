@@ -1,4 +1,4 @@
-from typing import List
+from typing import Sequence
 import random
 import math
 
@@ -9,7 +9,7 @@ class Solution:
         self.x = x_center
         self.y = y_center
 
-    def randPoint(self) -> List[float]:
+    def randPoint(self) -> Sequence[float]:
         rad = random.random() * 2 * math.pi
         r = (self.r * random.random()) ** 0.5
         return [self.x + r * math.cos(rad), self.y + r * math.sin(rad)]

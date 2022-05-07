@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
+    def productExceptSelf(self, nums: Sequence[int]) -> Sequence[int]:
         top = [1] * len(nums)
         # Top triangle
         temp = 1

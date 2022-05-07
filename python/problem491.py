@@ -1,14 +1,14 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findSubsequences(self, nums: List[int]) -> List[List[int]]:
+    def findSubsequences(self, nums: Sequence[int]) -> Sequence[Sequence[int]]:
         subs = {()}
         for num in nums:
             subs |= {sub + (num,) for sub in subs if not sub or sub[-1] <= num}
         return [list(sub) for sub in subs if len(sub) >= 2]
 
-    def findSubsequences2(self, nums: List[int]) -> List[List[int]]:
+    def findSubsequences2(self, nums: Sequence[int]) -> Sequence[Sequence[int]]:
         res = set()
 
         def dfs(i, path):

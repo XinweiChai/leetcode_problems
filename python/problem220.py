@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def containsNearbyAlmostDuplicate(self, nums: List[int], k: int, t: int) -> bool:
+    def containsNearbyAlmostDuplicate(self, nums: Sequence[int], k: int, t: int) -> bool:
         d = {}
         if t == 0:
             for idx, i in enumerate(nums):

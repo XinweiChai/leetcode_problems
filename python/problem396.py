@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxRotateFunction(self, nums: List[int]) -> int:
+    def maxRotateFunction(self, nums: Sequence[int]) -> int:
         ret = 0
         max_sum = float('-inf')
         for idx, i in enumerate(nums):

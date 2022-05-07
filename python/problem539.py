@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findMinDifference(self, timePoints: List[str]) -> int:
+    def findMinDifference(self, timePoints: Sequence[str]) -> int:
         time_set = set(timePoints)
         if len(time_set) < len(timePoints):
             return 0

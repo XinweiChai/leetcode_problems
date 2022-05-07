@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 # First version: 3 iterations with complexity O(kn^2)
 # class Solution:
-#     def maxProfit(self, k: int, prices: List[int]) -> int:
+#     def maxProfit(self, k: int, prices: Sequence[int]) -> int:
 #         if k == 0 or len(prices) < 2:
 #             return 0
 #         dp = [[0] * (k + 1) for _ in range(len(prices))]
@@ -17,7 +17,7 @@ from typing import List
 # First optimization:
 # Remove i in the iteration of j then eliminate this iteration
 # class Solution:
-#     def maxProfit(self, k: int, prices: List[int]) -> int:
+#     def maxProfit(self, k: int, prices: Sequence[int]) -> int:
 #         if k == 0 or len(prices) < 2:
 #             return 0
 #         dp = [[0] * (k + 1) for _ in range(len(prices))]
@@ -30,7 +30,7 @@ from typing import List
 #
 # Second optimization: swap the loop of k and i
 # class Solution:
-#     def maxProfit(self, k: int, prices: List[int]) -> int:
+#     def maxProfit(self, k: int, prices: Sequence[int]) -> int:
 #         if k == 0 or len(prices) < 2:
 #             return 0
 #         dp = [[0] * (k + 1) for _ in range(len(prices))]
@@ -44,7 +44,7 @@ from typing import List
 
 # Last optimization: iteration i only depends on i-1, this dimension in dp can be removed
 class Solution:
-    def maxProfit(self, k: int, prices: List[int]) -> int:
+    def maxProfit(self, k: int, prices: Sequence[int]) -> int:
         if k == 0 or len(prices) < 2:
             return 0
         dp = [0] * (k + 1)

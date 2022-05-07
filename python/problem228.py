@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def summaryRanges(self, nums: List[int]) -> List[str]:
+    def summaryRanges(self, nums: Sequence[int]) -> Sequence[str]:
         res = []
         start = 0
         while start < len(nums):

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maximumProduct(self, nums: List[int]) -> int:
+    def maximumProduct(self, nums: Sequence[int]) -> int:
         min1 = min2 = float('inf')
         max1 = max2 = max3 = float('-inf')
         for n in nums:

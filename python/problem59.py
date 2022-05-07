@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def generateMatrix(self, n: int) -> List[List[int]]:
+    def generateMatrix(self, n: int) -> Sequence[Sequence[int]]:
         if n == 1:
             return [[1]]
         res = [[0] * n for _ in range(n)]

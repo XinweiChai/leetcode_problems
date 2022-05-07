@@ -1,9 +1,9 @@
 import collections
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def gameOfLife(self, board: List[List[int]]):
+    def gameOfLife(self, board: Sequence[Sequence[int]]):
         """
         Do not return anything, modify board in-place instead.
         """

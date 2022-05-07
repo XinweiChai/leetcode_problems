@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def diffWaysToCompute(self, expression: str) -> List[int]:
+    def diffWaysToCompute(self, expression: str) -> Sequence[int]:
         memo = {}
 
         def compute(x, y, operator):

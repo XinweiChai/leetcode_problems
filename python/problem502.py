@@ -1,10 +1,10 @@
-from typing import List
+from typing import Sequence
 import heapq
 
 
 class Solution:
     # My solution, using 2 heaps
-    def findMaximizedCapital3(self, k: int, w: int, profits: List[int], capital: List[int]) -> int:
+    def findMaximizedCapital3(self, k: int, w: int, profits: Sequence[int], capital: Sequence[int]) -> int:
         if w >= max(capital):
             return w + sum(heapq.nlargest(k, profits))
         candidates = []
@@ -27,7 +27,7 @@ class Solution:
         return w
 
     # A more clever solution using one heap
-    def findMaximizedCapital2(self, k: int, w: int, profits: List[int], capital: List[int]) -> int:
+    def findMaximizedCapital2(self, k: int, w: int, profits: Sequence[int], capital: Sequence[int]) -> int:
         if w >= max(capital):
             return w + sum(heapq.nlargest(k, profits))
         projects = sorted(zip(capital, profits), reverse=True)

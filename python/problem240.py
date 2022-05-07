@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+    def searchMatrix(self, matrix: Sequence[Sequence[int]], target: int) -> bool:
         r = len(matrix)
         c = len(matrix[0])
         # O(r*logc) or O(c*logr)

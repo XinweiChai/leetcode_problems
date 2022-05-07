@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def minMutation(self, start: str, end: str, bank: List[str]) -> int:
+    def minMutation(self, start: str, end: str, bank: Sequence[str]) -> int:
         def valid_mutation(x, y):
             one = True
             for i, j in zip(x, y):

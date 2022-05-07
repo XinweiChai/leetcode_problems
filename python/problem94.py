@@ -2,7 +2,7 @@ import TreeNode
 
 
 class Solution:
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
+    def inorderTraversal(self, root: TreeNode) -> Sequence[int]:
         l = []
 
         def rec(root):

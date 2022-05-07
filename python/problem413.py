@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def numberOfArithmeticSlices(self, nums: List[int]) -> int:
+    def numberOfArithmeticSlices(self, nums: Sequence[int]) -> int:
         tot = 0
         streak = 0
         for i in range(2, len(nums)):

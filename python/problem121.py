@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
+    def maxProfit(self, prices: Sequence[int]) -> int:
         maxCur = 0
         maxSoFar = 0
         for i in range(1,len(prices)):

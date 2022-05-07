@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def solveNQueens(self, n: int) -> List[List[str]]:
+    def solveNQueens(self, n: int) -> Sequence[Sequence[str]]:
         res = []
         queens = []
         cols = [True] * n

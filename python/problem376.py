@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
     class Solution:
-        def wiggleMaxLength(self, nums: List[int]) -> int:
+        def wiggleMaxLength(self, nums: Sequence[int]) -> int:
             if len(nums) == 1:
                 return 1
             ret = 2

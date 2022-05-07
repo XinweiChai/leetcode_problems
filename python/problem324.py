@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import random
 
 
 class Solution:
-    def wiggleSort(self, nums: List[int]) -> None:
+    def wiggleSort(self, nums: Sequence[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """

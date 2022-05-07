@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 from TreeNode import TreeNode
 
 
 class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
+    def buildTree(self, preorder: Sequence[int], inorder: Sequence[int]) -> TreeNode:
 
         # Concise version but takes time and space
         # if inorder:

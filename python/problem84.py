@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def largestRectangleArea(self, heights: List[int]) -> int:
+    def largestRectangleArea(self, heights: Sequence[int]) -> int:
         # def rec(left, right):
         #     if left == right:
         #         return 0

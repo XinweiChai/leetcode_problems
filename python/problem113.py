@@ -2,7 +2,7 @@ from TreeNode import TreeNode
 
 
 class Solution:
-    def pathSum(self, root: TreeNode, targetSum: int) -> List[List[int]]:
+    def pathSum(self, root: TreeNode, targetSum: int) -> Sequence[Sequence[int]]:
         if not root:
             return []
         paths = []

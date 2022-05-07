@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, nums: Sequence[int]) -> int:
         if len(nums) == 1:
             return nums[0]
 

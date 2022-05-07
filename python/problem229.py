@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def majorityElement(self, nums: List[int]) -> List[int]:
+    def majorityElement(self, nums: Sequence[int]) -> Sequence[int]:
         # Still Boyer-Moore algorithm
         if not nums:
             return []

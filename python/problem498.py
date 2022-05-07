@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
+    def findDiagonalOrder(self, mat: Sequence[Sequence[int]]) -> Sequence[int]:
         x = 0
         y = 0
         r = len(mat)

@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def singleNumber(self, nums: List[int]) -> List[int]:
+    def singleNumber(self, nums: Sequence[int]) -> Sequence[int]:
         axorb = 0
         for i in nums:
             axorb ^= i

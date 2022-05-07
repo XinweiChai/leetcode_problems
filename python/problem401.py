@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import itertools
 
 
 class Solution:
-    def readBinaryWatch(self, turnedOn: int) -> List[str]:
+    def readBinaryWatch(self, turnedOn: int) -> Sequence[str]:
         res = []
 
         def has_ones(num):
@@ -27,7 +27,7 @@ class Solution:
         return res
 
     # Short version
-    def readBinaryWatch2(self, turnedOn: int) -> List[str]:
+    def readBinaryWatch2(self, turnedOn: int) -> Sequence[str]:
         return ['%d:%02d' % (h, m)
                 for h in range(12) for m in range(60)
                 if (bin(h) + bin(m)).count('1') == turnedOn]

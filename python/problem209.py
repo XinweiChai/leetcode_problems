@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+    def minSubArrayLen(self, target: int, nums: Sequence[int]) -> int:
         min_len = len(nums) + 1
         l_ptr = 0
         for r_ptr in range(len(nums)):

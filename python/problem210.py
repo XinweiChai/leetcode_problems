@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 from collections import defaultdict
 
 class Solution:
-    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+    def findOrder(self, numCourses: int, prerequisites: Sequence[Sequence[int]]) -> Sequence[int]:
         # graph = [[] for _ in range(numCourses)]
         # rev_graph = [[] for _ in range(numCourses)]
         # for x, y in prerequisites:

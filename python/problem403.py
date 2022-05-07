@@ -1,9 +1,9 @@
 from functools import lru_cache
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def canCross(self, stones: List[int]) -> bool:
+    def canCross(self, stones: Sequence[int]) -> bool:
         self.memo = set()
         target = stones[-1]
         stones = set(stones)
@@ -31,7 +31,7 @@ class Solution:
         self.memo.add((cur, speed))
         return False
 
-    def canCross2(self, stones: List[int]) -> bool:
+    def canCross2(self, stones: Sequence[int]) -> bool:
         dict_stones = {i: idx for idx, i in enumerate(stones)}
         steps = [set() for _ in range(len(stones))]
         steps[0].add(0)

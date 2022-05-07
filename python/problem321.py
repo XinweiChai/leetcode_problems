@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
+    def maxNumber(self, nums1: Sequence[int], nums2: Sequence[int], k: int) -> Sequence[int]:
         def prep(nums, k):
             if not k:
                 return []

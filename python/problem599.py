@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def findRestaurant(self, list1: List[str], list2: List[str]) -> List[str]:
+    def findRestaurant(self, list1: Sequence[str], list2: Sequence[str]) -> Sequence[str]:
         # O(n^2)
         # res = []
         # if len(list1) > len(list2):

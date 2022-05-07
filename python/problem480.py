@@ -1,9 +1,9 @@
-from typing import List
+from typing import Sequence
 import heapq
 
 
 class Solution:
-    def medianSlidingWindow(self, nums: List[int], k: int) -> List[float]:
+    def medianSlidingWindow(self, nums: Sequence[int], k: int) -> Sequence[float]:
         def move(h1, h2):
             x, i = heapq.heappop(h1)
             heapq.heappush(h2, (-x, i))

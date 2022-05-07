@@ -1,8 +1,8 @@
-from typing import List
+from typing import Sequence
 
 
 class Solution:
-    def maximalSquare(self, matrix: List[List[str]]) -> int:
+    def maximalSquare(self, matrix: Sequence[Sequence[str]]) -> int:
         # Bad implementation
         # r = len(matrix)
         # c = len(matrix[0])
